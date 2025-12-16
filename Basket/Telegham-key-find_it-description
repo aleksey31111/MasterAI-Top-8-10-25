@@ -1,0 +1,23 @@
+ключ stadyalex=7339232084:AAG0Cd9IixKS4kwf048QKbHn5RBdgIqnFEs
+ключ newstadyalex=7339232084:AAG0Cd9IixKS4kwf048QKbHn5RBdgIqnFEs
+ You will find it at - t.me/newstadyalex_bot
+For a description of the Bot API, see this page: - https://core.telegram.org/bots/api
+
+
+Дополнительно:
+Если хотите избавиться от предупреждений и ненужных ошибок, рекомендуется включить обработку случая отсутствия очереди задач,
+например, путем использования условного блока:
+
+python
+Копировать
+async def remind_daily(update, context):
+    if context.job_queue:
+        job_queue = context.job_queue
+        user_id = update.effective_user.id
+        async def reminder_callback(context):
+            logger.info(f"Ежедневное напоминание для пользователя {user_id}")
+            await context.bot.send_message(user_id, "Время отметить выполненные привычки!")
+        job_queue.run_daily(reminder_callback, time=datetime.time(hour=9, minute=0, tzinfo=pytz.timezone("Europe/Moscow")))
+    else:
+        logger.warning("Job queue is not available. Reminders will not work.")
+Однако наиболее правильным решением является установка полной версии библиотеки с поддержкой очереди задач.
