@@ -1,11 +1,14 @@
+import asyncio
 import os
+from distutils.cmd import Command
+
 from dotenv import load_dotenv
 from aiogram import Bot, Dispatcher, types
 from aiogram.types import KeyboardButton, ReplyKeyboardMarkup, InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.filters.command import CommandStart, CommandObject
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
-from aiogram.utils.callback_data import CallbackData
+# from aiogram.utils.callback_data import CallbackData
 from aiofile import AIOFile
 from asyncio import sleep
 from datetime import datetime, time
@@ -118,5 +121,6 @@ async def schedule_daily_reminders():
         await sleep(60)
 
 if __name__ == "__main__":
+    loop = asyncio.new_event_loop()  # создаем новый цикл событий
     dp.run_polling(bot)
     loop.create_task(schedule_daily_reminders())
