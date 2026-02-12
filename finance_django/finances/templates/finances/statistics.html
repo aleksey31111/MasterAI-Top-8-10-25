@@ -1,0 +1,168 @@
+{% extends 'finances/base.html' %}
+
+{% block title %}Статистика{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">📈 Статистика и анализ</h1>
+    
+    <div class="row">
+        <!-- Статистика по категориям -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">📊 Статистика по категориям</h5>
+                </div>
+                <div class="card-body">
+                    <h6 class="text-success">Доходы</h6>
+                    <table class="table table-sm">
+                        <tr>
+                            <td>Всего:</td>
+                            <td class="fw-bold">{{ stats.доход.total|floatformat:2 }} ₽</td>
+                        </tr>
+                        <tr>
+                            <td>Количество операций:</td>
+                            <td>{{ stats.доход.count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Средняя сумма:</td>
+                            <td>{{ stats.доход.average|floatformat:2 }} ₽</td>
+                        </tr>
+                    </table>
+                    
+                    <h6 class="text-danger mt-3">Расходы</h6>
+                    <table class="table table-sm">
+                        <tr>
+                            <td>Всего:</td>
+                            <td class="fw-bold">{{ stats.расход.total|floatformat:2 }} ₽</td>
+                        </tr>
+                        <tr>
+                            <td>Количество операций:</td>
+                            <td>{{ stats.расход.count }}</td>
+                        </tr>
+                        <tr>
+                            <td>Средняя сумма:</td>
+                            <td>{{ stats.расход.average|floatformat:2 }} ₽</td>
+                        </tr>
+                    </table>
+                    
+                    <hr>
+                    
+                    <div class="mt-3">
+                        <strong>Соотношение расходов к доходам:</strong><br>
+                        {% if stats.доход.total > 0 %}
+                            <div class="progress mt-2" style="height: 25px;">
+                                <div class="progress-bar bg-danger" 
+                                     style="width: {% widthratio stats.расход.total stats.доход.total 100 %}%">
+                                    {% widthratio stats.расход.total stats.доход.total 100 %}%
+                                </div>
+                            </div>
+                        {% else %}
+                            <span class="text-muted">Нет данных о доходах</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Динамика по месяцам -->
+        <div class="col-md-6 mb-4">
+            <div class="card h-100">
+                <div class="card-header">
+                    <h5 class="mb-0">📅 Динамика по месяцам</h5>
+                </div>
+                <div class="card-body">
+                    {% if income_by_month or expense_by_month %}
+                        <div class="table-responsive">
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th>Месяц</th>
+                                        <th>Доходы</th>
+                                        <th>Расходы</th>
+                                        <th>Баланс</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for month, income in income_by_month.items %}
+                                        <tr>
+                                            <td>{{ month }}</td>
+                                            <td class="text-success">{{ income|floatformat:2 }} ₽</td>
+                                            <td class="text-danger">{{ expense_by_month|get_item:month|default:0|floatformat:2 }} ₽</td>
+                                            <td>
+                                                {% with balance=income|add:expense_by_month|get_item:month|negative %}
+                                                    <span class="{% if balance >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                                        {{ balance|floatformat:2 }} ₽
+                                                    </span>
+                                                {% endwith %}
+                                            </td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    {% else %}
+                        <p class="text-muted">Нет данных для отображения динамики</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Общая статистика -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">💰 Общая финансовая статистика</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Общий баланс</h6>
+                                <h3 class="{% if balance_data.balance >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                    {{ balance_data.balance|floatformat:2 }} ₽
+                                </h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Всего доходов</h6>
+                                <h3 class="text-success">{{ balance_data.income|floatformat:2 }} ₽</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Всего расходов</h6>
+                                <h3 class="text-danger">{{ balance_data.expense|floatformat:2 }} ₽</h3>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="text-center">
+                                <h6>Коэффициент</h6>
+                                <h3>
+                                    {% if balance_data.income > 0 %}
+                                        {% widthratio balance_data.expense balance_data.income 100 %}%
+                                    {% else %}
+                                        0%
+                                    {% endif %}
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    // Вспомогательный фильтр для шаблона
+    document.addEventListener('DOMContentLoaded', function() {
+        // Здесь можно добавить JS для графиков в будущем
+    });
+</script>
+{% endblock %}

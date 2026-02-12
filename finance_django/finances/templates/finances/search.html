@@ -1,0 +1,161 @@
+{% extends 'finances/base.html' %}
+
+{% block title %}Поиск операций{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">🔍 Поиск операций за период</h1>
+    
+    <div class="row">
+        <div class="col-md-8 mx-auto">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form method="get" action="{% url 'search' %}" class="row g-3">
+                        <div class="col-md-5">
+                            <label for="start_date" class="form-label">Начальная дата</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="start_date" 
+                                   name="start_date" 
+                                   value="{{ start_date }}" 
+                                   placeholder="ДД.ММ.ГГГГ"
+                                   required>
+                        </div>
+                        <div class="col-md-5">
+                            <label for="end_date" class="form-label">Конечная дата</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="end_date" 
+                                   name="end_date" 
+                                   value="{{ end_date }}" 
+                                   placeholder="ДД.ММ.ГГГГ"
+                                   required>
+                        </div>
+                        <div class="col-md-2 d-flex align-items-end">
+                            <button type="submit" class="btn btn-primary w-100">
+                                Найти
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Результаты поиска -->
+            {% if request.GET.start_date %}
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">📋 Результаты поиска</h5>
+                    </div>
+                    <div class="card-body">
+                        {% if operations %}
+                            <p class="text-muted">
+                                Найдено операций: <strong>{{ operations|length }}</strong>
+                            </p>
+                            
+                            {% with total_income=0 total_expense=0 %}
+                                <div class="table-responsive">
+                                    <table class="table table-hover">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Дата</th>
+                                                <th>Категория</th>
+                                                <th>Сумма</th>
+                                                <th>Описание</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            {% for op in operations %}
+                                                <tr>
+                                                    <td>{{ op.date }}</td>
+                                                    <td>
+                                                        <span class="badge {% if op.category == 'доход' %}bg-success{% else %}bg-danger{% endif %}">
+                                                            {{ op.category }}
+                                                        </span>
+                                                    </td>
+                                                    <td class="{% if op.category == 'доход' %}income{% else %}expense{% endif %} fw-bold">
+                                                        {{ op.amount|floatformat:2 }} ₽
+                                                    </td>
+                                                    <td>{{ op.description }}</td>
+                                                </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            {% endwith %}
+                            
+                            <!-- Итоги за период -->
+                            <div class="row mt-4">
+                                <div class="col-md-4">
+                                    <div class="card bg-light">
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title">Доходы</h6>
+                                            <p class="card-text h5 text-success">
+                                                {% for op in operations %}
+                                                    {% if op.category == 'доход' %}
+                                                        {{ op.amount|floatformat:2 }} ₽
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bg-light">
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title">Расходы</h6>
+                                            <p class="card-text h5 text-danger">
+                                                {% for op in operations %}
+                                                    {% if op.category == 'расход' %}
+                                                        {{ op.amount|floatformat:2 }} ₽
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card bg-light">
+                                        <div class="card-body text-center">
+                                            <h6 class="card-title">Баланс</h6>
+                                            <p class="card-text h5 text-info">
+                                                {% for op in operations %}
+                                                    {% if op.category == 'доход' %}
+                                                        {{ op.amount|floatformat:2 }} ₽
+                                                    {% else %}
+                                                        -{{ op.amount|floatformat:2 }} ₽
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="alert alert-info mb-0">
+                                За указанный период операций не найдено.
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    // Валидация дат на клиенте
+    document.querySelector('form').addEventListener('submit', function(e) {
+        const startDate = document.getElementById('start_date').value;
+        const endDate = document.getElementById('end_date').value;
+        
+        const dateRegex = /^\d{2}\.\d{2}\.\d{4}$/;
+        
+        if (!dateRegex.test(startDate) || !dateRegex.test(endDate)) {
+            e.preventDefault();
+            alert('Пожалуйста, введите даты в формате ДД.ММ.ГГГГ');
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

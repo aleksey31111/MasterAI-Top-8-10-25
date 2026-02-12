@@ -1,10 +1,115 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'finances/base.html' %}
+
+{% block title %}Добавить операцию{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="mb-0">➕ Добавление новой операции</h4>
+                </div>
+                <div class="card-body">
+                    <form method="post" action="{% url 'add_operation' %}">
+                        {% csrf_token %}
+                        
+                        <!-- Дата -->
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Дата</label>
+                            <input type="text" 
+                                   class="form-control" 
+                                   id="date" 
+                                   name="date" 
+                                   placeholder="ДД.ММ.ГГГГ" 
+                                   value="{{ today|date:'d.m.Y' }}"
+                                   required>
+                            <div class="form-text">Формат: ДД.ММ.ГГГГ (например, 01.02.2026)</div>
+                        </div>
+                        
+                        <!-- Категория -->
+                        <div class="mb-3">
+                            <label class="form-label">Категория</label>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="category" 
+                                       id="income" 
+                                       value="доход" 
+                                       checked>
+                                <label class="form-check-label income" for="income">
+                                    📈 Доход
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" 
+                                       type="radio" 
+                                       name="category" 
+                                       id="expense" 
+                                       value="расход">
+                                <label class="form-check-label expense" for="expense">
+                                    📉 Расход
+                                </label>
+                            </div>
+                        </div>
+                        
+                        <!-- Сумма -->
+                        <div class="mb-3">
+                            <label for="amount" class="form-label">Сумма</label>
+                            <div class="input-group">
+                                <input type="number" 
+                                       class="form-control" 
+                                       id="amount" 
+                                       name="amount" 
+                                       placeholder="0.00" 
+                                       step="0.01" 
+                                       min="0.01" 
+                                       required>
+                                <span class="input-group-text">₽</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Описание -->
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Описание</label>
+                            <textarea class="form-control" 
+                                      id="description" 
+                                      name="description" 
+                                      rows="3" 
+                                      placeholder="Назначение платежа..."
+                                      required></textarea>
+                        </div>
+                        
+                        <!-- Кнопки -->
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <a href="{% url 'dashboard' %}" class="btn btn-secondary me-md-2">
+                                Отмена
+                            </a>
+                            <button type="submit" class="btn btn-primary">
+                                ✅ Добавить операцию
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% block extra_js %}
+<script>
+    // Автоматическая установка сегодняшней даты
+    document.addEventListener('DOMContentLoaded', function() {
+        const today = new Date();
+        const day = String(today.getDate()).padStart(2, '0');
+        const month = String(today.getMonth() + 1).padStart(2, '0');
+        const year = today.getFullYear();
+        
+        const dateInput = document.getElementById('date');
+        if (!dateInput.value) {
+            dateInput.value = `${day}.${month}.${year}`;
+        }
+    });
+</script>
+{% endblock %}
+{% endblock %}

@@ -5,22 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="027a92e0-794e-4e8a-b9e9-b5c919ca903b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/1_02_2026_ProgrammingAI.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/1-main-Simple RandomNamber.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/2-main-LevelDifficult.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/25-Ltsson-main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/4-main-difficult10.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/5-main-Faza 1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/6-main-Faza 2.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/7-main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Basket/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Basket/10-02-2026-HoomeWork-finance_manager.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/finance_django/finances/templates/finances/add_operation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/2-main-LevelDifficult.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/2-main-LevelDifficult-RandomNumber.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/25-Ltsson-main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/25-GraduateOfStudent-main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/4-main-difficult10.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/4-AncetForEmployment-main-difficult10.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/5-main-Faza 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/5-SimpltListOfDeal-main-Faza 1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Basket/7-main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/7-LevelUp-ListOfDeal-viaDictinory-main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/age_history.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/financial_report.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/Calculator of age PRO2_0-main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/возраст_результат_20260208_222718.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Basket/возраст_результат_CalculateOfAge.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -48,12 +46,14 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.finance_manager.executor&quot;: &quot;Run&quot;,
     &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
     &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
     &quot;Python.main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;E:/PythonCours/Python/1_02_2026_ProgrammingAI/Basket&quot;
   }
 }</component>
@@ -65,7 +65,29 @@
       <recent name="E:\PythonCours\Python\1_02_2026_ProgrammingAI\Basket" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.main (1)">
+  <component name="RunManager" selected="Python.finance_manager">
+    <configuration name="finance_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1_02_2026_ProgrammingAI" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance_manager.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="1_02_2026_ProgrammingAI" />
       <option name="ENV_FILES" value="" />
@@ -134,6 +156,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.finance_manager" />
         <item itemvalue="Python.main (1)" />
         <item itemvalue="Python.main (2)" />
       </list>
