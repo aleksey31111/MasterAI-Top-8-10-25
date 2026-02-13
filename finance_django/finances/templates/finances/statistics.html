@@ -1,11 +1,12 @@
 {% extends 'finances/base.html' %}
+{% load finance_filters %}
 
 {% block title %}Статистика{% endblock %}
 
 {% block content %}
 <div class="container mt-4">
     <h1 class="mb-4">📈 Статистика и анализ</h1>
-    
+
     <div class="row">
         <!-- Статистика по категориям -->
         <div class="col-md-6 mb-4">
@@ -29,7 +30,7 @@
                             <td>{{ stats.доход.average|floatformat:2 }} ₽</td>
                         </tr>
                     </table>
-                    
+
                     <h6 class="text-danger mt-3">Расходы</h6>
                     <table class="table table-sm">
                         <tr>
@@ -45,17 +46,19 @@
                             <td>{{ stats.расход.average|floatformat:2 }} ₽</td>
                         </tr>
                     </table>
-                    
+
                     <hr>
-                    
+
                     <div class="mt-3">
                         <strong>Соотношение расходов к доходам:</strong><br>
                         {% if stats.доход.total > 0 %}
                             <div class="progress mt-2" style="height: 25px;">
-                                <div class="progress-bar bg-danger" 
+                                {% with ratio=stats.расход.total|add:0 %}
+                                <div class="progress-bar bg-danger"
                                      style="width: {% widthratio stats.расход.total stats.доход.total 100 %}%">
                                     {% widthratio stats.расход.total stats.доход.total 100 %}%
                                 </div>
+                                {% endwith %}
                             </div>
                         {% else %}
                             <span class="text-muted">Нет данных о доходах</span>
@@ -85,18 +88,30 @@
                                 </thead>
                                 <tbody>
                                     {% for month, income in income_by_month.items %}
-                                        <tr>
-                                            <td>{{ month }}</td>
-                                            <td class="text-success">{{ income|floatformat:2 }} ₽</td>
-                                            <td class="text-danger">{{ expense_by_month|get_item:month|default:0|floatformat:2 }} ₽</td>
-                                            <td>
-                                                {% with balance=income|add:expense_by_month|get_item:month|negative %}
-                                                    <span class="{% if balance >= 0 %}text-success{% else %}text-danger{% endif %}">
-                                                        {{ balance|floatformat:2 }} ₽
-                                                    </span>
+                                    <tr>
+                                        <td>{{ month }}</td>
+                                        <td class="text-success">{{ income|floatformat:2 }} ₽</td>
+                                        <td class="text-danger">
+                                            {% with expense=expense_by_month|get_item:month %}
+                                                {{ expense|default:0|floatformat:2 }} ₽
+                                            {% endwith %}
+                                        </td>
+                                        <td>
+                                            {% with expense=expense_by_month|get_item:month|default:0 %}
+                                                {% with balance=income|add:expense|negative %}
+                                                <span class="{% if balance >= 0 %}text-success{% else %}text-danger{% endif %}">
+                                                    {{ balance|floatformat:2 }} ₽
+                                                </span>
                                                 {% endwith %}
-                                            </td>
-                                        </tr>
+                                            {% endwith %}
+                                        </td>
+                                    </tr>
+                                    {% empty %}
+                                    <tr>
+                                        <td colspan="4" class="text-center text-muted">
+                                            Нет данных для отображения
+                                        </td>
+                                    </tr>
                                     {% endfor %}
                                 </tbody>
                             </table>
@@ -156,13 +171,4 @@
         </div>
     </div>
 </div>
-{% endblock %}
-
-{% block extra_js %}
-<script>
-    // Вспомогательный фильтр для шаблона
-    document.addEventListener('DOMContentLoaded', function() {
-        // Здесь можно добавить JS для графиков в будущем
-    });
-</script>
 {% endblock %}
