@@ -1,0 +1,1 @@
+python production_ready.py --create-config

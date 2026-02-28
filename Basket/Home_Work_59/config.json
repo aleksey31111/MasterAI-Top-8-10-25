@@ -1,0 +1,42 @@
+{
+  "scraper": {
+    "name": "QuoteScraper",
+    "base_url": "http://quotes.toscrape.com",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    "default_delay": 1,
+    "max_retries": 3,
+    "timeout": 10,
+    "respect_robots": true,
+    "max_pages": null
+  },
+  "selectors": {
+    "quote": "div.quote",
+    "text": "span.text",
+    "author": "small.author",
+    "tags": "a.tag",
+    "next_page": "li.next a"
+  },
+  "validation": {
+    "min_text_length": 5,
+    "max_text_length": 500,
+    "required_fields": [
+      "text",
+      "author"
+    ]
+  },
+  "output": {
+    "formats": [
+      "json",
+      "csv",
+      "txt"
+    ],
+    "encoding": "utf-8",
+    "pretty_print": true,
+    "directory": "output"
+  },
+  "logging": {
+    "level": "INFO",
+    "file": "logs/scraper.log",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}

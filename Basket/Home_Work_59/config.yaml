@@ -1,0 +1,33 @@
+logging:
+  file: logs/scraper.log
+  format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  level: INFO
+output:
+  directory: output
+  encoding: utf-8
+  formats:
+  - json
+  - csv
+  - txt
+  pretty_print: true
+scraper:
+  base_url: http://quotes.toscrape.com
+  default_delay: 1
+  max_pages: null
+  max_retries: 3
+  name: QuoteScraper
+  respect_robots: true
+  timeout: 10
+  user_agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36
+selectors:
+  author: small.author
+  next_page: li.next a
+  quote: div.quote
+  tags: a.tag
+  text: span.text
+validation:
+  max_text_length: 500
+  min_text_length: 5
+  required_fields:
+  - text
+  - author
