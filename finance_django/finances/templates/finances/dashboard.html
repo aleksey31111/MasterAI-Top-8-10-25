@@ -1,0 +1,96 @@
+{% extends 'finances/base.html' %}
+
+{% block title %}Дашборд - Личные финансы{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="mb-4">📊 Панель управления</h1>
+    
+    <!-- Статистические карточки -->
+    <div class="row mb-4">
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-success stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Доходы</h5>
+                    <p class="card-text display-6">{{ income|floatformat:2 }} ₽</p>
+                    <small>Всего операций: {{ total_operations }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-danger stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Расходы</h5>
+                    <p class="card-text display-6">{{ expense|floatformat:2 }} ₽</p>
+                    <small>Всего операций: {{ total_operations }}</small>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-3">
+            <div class="card text-white bg-info stat-card">
+                <div class="card-body">
+                    <h5 class="card-title">Баланс</h5>
+                    <p class="card-text display-6">{{ balance|floatformat:2 }} ₽</p>
+                    {% if balance > 0 %}
+                        <small>✅ Положительный</small>
+                    {% elif balance < 0 %}
+                        <small>⚠️ Отрицательный</small>
+                    {% else %}
+                        <small>➖ Нулевой</small>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Последние операции -->
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">📋 Последние операции</h5>
+                </div>
+                <div class="card-body">
+                    {% if recent_operations %}
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Дата</th>
+                                        <th>Категория</th>
+                                        <th>Сумма</th>
+                                        <th>Описание</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for op in recent_operations %}
+                                        <tr>
+                                            <td>{{ op.date }}</td>
+                                            <td>
+                                                <span class="badge {% if op.category == 'доход' %}bg-success{% else %}bg-danger{% endif %}">
+                                                    {{ op.category }}
+                                                </span>
+                                            </td>
+                                            <td class="{% if op.category == 'доход' %}income{% else %}expense{% endif %}">
+                                                <strong>{{ op.amount|floatformat:2 }} ₽</strong>
+                                            </td>
+                                            <td>{{ op.description|truncatechars:30 }}</td>
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                        <a href="{% url 'operation_list' %}" class="btn btn-outline-primary">
+                            Все операции →
+                        </a>
+                    {% else %}
+                        <p class="text-muted mb-0">Нет операций. 
+                            <a href="{% url 'add_operation' %}">Добавьте первую операцию!</a>
+                        </p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

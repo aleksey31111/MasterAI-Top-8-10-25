@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Black">
+<<<<<<< HEAD
     <option name="sdkName" value="Python 3.12 (28-02-2026-ParsingSite_31-lesson)" />
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (28-02-2026-ParsingSite_31-lesson)" project-jdk-type="Python SDK" />
+=======
+    <option name="sdkName" value="Python 3.12 (1_02_2026_ProgrammingAI)" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.12 (1_02_2026_ProgrammingAI)" project-jdk-type="Python SDK" />
+  <component name="PyCharmProfessionalAdvertiser">
+    <option name="shown" value="true" />
+  </component>
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
 </project>

@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="b1e04e8e-6080-4927-836d-9f31ff58aab7" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/28-02-2026-ParsingSite_31-lesson.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
@@ -20,6 +21,13 @@
       <change afterPath="$PROJECT_DIR$/Basket/Home_Work_59/expample_for_Use.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Basket/Home_Work_59/installing_Dependencies.md" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Basket/Home_Work_59/production_ready.py" afterDir="false" />
+=======
+    <list default="true" id="027a92e0-794e-4e8a-b9e9-b5c919ca903b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_django/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/finance_django/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_django/finances/templates/finances/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/finance_django/finances/templates/finances/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/finance_django/finances/templates/finances/statistics.html" beforeDir="false" afterPath="$PROJECT_DIR$/finance_django/finances/templates/finances/statistics.html" afterDir="false" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +37,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+<<<<<<< HEAD
+=======
+        <option value="HTML File" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
         <option value="Python Script" />
       </list>
     </option>
@@ -36,6 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+<<<<<<< HEAD
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -43,11 +56,18 @@
   &quot;associatedIndex&quot;: 8
 }</component>
   <component name="ProjectId" id="3AIIlC8nzcXXlApQkwHmEiAQRrl" />
+=======
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
+  <component name="ProjectId" id="393pPSe5vp1DfM7U9oOFM7BbEa0" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.main.executor": "Run",
@@ -78,6 +98,32 @@
   <component name="RunManager" selected="Python.scraper">
     <configuration name="parse_quotes" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="28-02-2026-ParsingSite_31-lesson" />
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;Python.finance_manager.executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main (2).executor&quot;: &quot;Run&quot;,
+    &quot;Python.main.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/PythonCours/Python/1_02_2026_ProgrammingAI/Basket&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\PythonCours\Python\1_02_2026_ProgrammingAI\Basket" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\PythonCours\Python\1_02_2026_ProgrammingAI\Basket" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.finance_manager">
+    <configuration name="finance_manager" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1_02_2026_ProgrammingAI" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -89,7 +135,11 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="E:\PythonCours\Python\28-02-2026-ParsingSite_31-lesson\Basket\Base_parsing\Task_1\parse_quotes.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/finance_manager.py" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,8 +148,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="parse_quotes_4" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="28-02-2026-ParsingSite_31-lesson" />
+=======
+    <configuration name="main (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1_02_2026_ProgrammingAI" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,7 +166,11 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="E:\PythonCours\Python\28-02-2026-ParsingSite_31-lesson\Basket\Base_parsing\Task_3_PreservingWisdomForDescendants\parse_quotes_4.py" />
+=======
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -120,8 +179,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="parse_quotes_5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="28-02-2026-ParsingSite_31-lesson" />
+=======
+    <configuration name="main (2)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="1_02_2026_ProgrammingAI" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -129,11 +193,19 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
+<<<<<<< HEAD
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="E:\PythonCours\Python\28-02-2026-ParsingSite_31-lesson\Basket\Base_parsing\PRACTICE_2_FUNCTIONALITY_EXTENSION_Task_4_Becoming_Full-Fledged_Researchers\parse_quotes_5.py" />
+=======
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Basket" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Basket/main.py" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -142,8 +214,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+<<<<<<< HEAD
     <configuration name="parse_quotes_6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="28-02-2026-ParsingSite_31-lesson" />
+=======
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <module name="1_02_2026_ProgrammingAI" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -155,6 +232,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+<<<<<<< HEAD
       <option name="SCRIPT_NAME" value="E:\PythonCours\Python\28-02-2026-ParsingSite_31-lesson\Basket\Base_parsing\Task_5_Making_Our_Script_Invulnerable\parse_quotes_6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
@@ -178,6 +256,9 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="E:\PythonCours\Python\28-02-2026-ParsingSite_31-lesson\Basket\Base_parsing\TESTING_AND_OPTIMIZATION\scraper.py" />
+=======
+      <option name="SCRIPT_NAME" value="E:\PythonCours\Python\1_02_2026_ProgrammingAI\Basket\main.py" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -188,10 +269,16 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="Python.scraper" />
         <item itemvalue="Python.parse_quotes_6" />
         <item itemvalue="Python.parse_quotes_5" />
         <item itemvalue="Python.parse_quotes_4" />
+=======
+        <item itemvalue="Python.finance_manager" />
+        <item itemvalue="Python.main (1)" />
+        <item itemvalue="Python.main (2)" />
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
       </list>
     </recent_temporary>
   </component>
@@ -205,11 +292,19 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
+<<<<<<< HEAD
       <changelist id="b1e04e8e-6080-4927-836d-9f31ff58aab7" name="Changes" comment="" />
       <created>1772273806628</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1772273806628</updated>
+=======
+      <changelist id="027a92e0-794e-4e8a-b9e9-b5c919ca903b" name="Changes" comment="" />
+      <created>1769934583766</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769934583766</updated>
+>>>>>>> 7148b41c6f9cc81b2bff4a2e1121f8f7febdadc4
     </task>
     <servers />
   </component>

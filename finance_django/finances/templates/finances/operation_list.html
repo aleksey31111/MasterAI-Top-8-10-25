@@ -1,0 +1,99 @@
+{% extends 'finances/base.html' %}
+
+{% block title %}Все операции{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h1>📋 Все операции</h1>
+        <a href="{% url 'add_operation' %}" class="btn btn-success">
+            ➕ Добавить операцию
+        </a>
+    </div>
+    
+    <!-- Краткая статистика -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card border-success">
+                <div class="card-body">
+                    <h5 class="card-title text-success">Доходы</h5>
+                    <p class="card-text h4">{{ total_income|floatformat:2 }} ₽</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-danger">
+                <div class="card-body">
+                    <h5 class="card-title text-danger">Расходы</h5>
+                    <p class="card-text h4">{{ total_expense|floatformat:2 }} ₽</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card border-info">
+                <div class="card-body">
+                    <h5 class="card-title text-info">Баланс</h5>
+                    <p class="card-text h4">{{ balance|floatformat:2 }} ₽</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Таблица операций -->
+    {% if operations %}
+        <div class="card">
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead class="table-light">
+                            <tr>
+                                <th>ID</th>
+                                <th>Дата</th>
+                                <th>Категория</th>
+                                <th>Сумма</th>
+                                <th>Описание</th>
+                                <th>Действия</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for op in operations %}
+                                <tr>
+                                    <td>{{ op.id }}</td>
+                                    <td>{{ op.date }}</td>
+                                    <td>
+                                        <span class="badge {% if op.category == 'доход' %}bg-success{% else %}bg-danger{% endif %}">
+                                            {{ op.category }}
+                                        </span>
+                                    </td>
+                                    <td class="{% if op.category == 'доход' %}income{% else %}expense{% endif %} fw-bold">
+                                        {{ op.amount|floatformat:2 }} ₽
+                                    </td>
+                                    <td>{{ op.description }}</td>
+                                    <td>
+                                        <form method="post" 
+                                              action="{% url 'delete_operation' op.id %}" 
+                                              style="display: inline;">
+                                            {% csrf_token %}
+                                            <button type="submit" 
+                                                    class="btn btn-sm btn-danger" 
+                                                    onclick="return confirm('Удалить операцию?')">
+                                                🗑️
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-info">
+            <h5 class="alert-heading">Нет операций!</h5>
+            <p>У вас пока нет ни одной финансовой операции. 
+               <a href="{% url 'add_operation' %}" class="alert-link">Добавьте первую операцию</a>.</p>
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
