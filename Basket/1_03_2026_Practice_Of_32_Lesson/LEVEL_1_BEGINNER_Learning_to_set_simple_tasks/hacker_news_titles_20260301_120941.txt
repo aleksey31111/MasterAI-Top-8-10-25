@@ -1,0 +1,33 @@
+Заголовки новостей с Hacker News (2026-03-01 12:09:41)
+============================================================
+
+1. Microgpt
+2. We do not think Anthropic should be designated as a supply chain risk
+3. 10-202: Introduction to Modern AI (CMU)
+4. Switch to Claude without starting over
+5. An ode to houseplant programming (2025)
+6. The Windows 95 user interface: A case study in usability engineering (1996)
+7. The happiest I've ever been
+8. Obsidian Sync now has a headless client
+9. Sub-second volumetric 3D printing by synthesis of holographic light fields
+10. H-Bomb: A Frank Lloyd Wright Typographic Mystery
+11. Block the “Upgrade to Tahoe” Alerts
+12. Hardwood: A New Parser for Apache Parquet
+13. Woxi: Wolfram Mathematica Reimplementation in Rust
+14. Addressing Antigravity Bans and Reinstating Access
+15. MCP server that reduces Claude Code context consumption by 98%
+16. Verified Spec-Driven Development (VSDD)
+17. Show HN: Now I Get It – Translate scientific papers into interactive webpages
+18. Cracking the Python Monorepo
+19. Our Agreement with the Department of War
+20. The Science of Detecting LLM-Generated Text
+21. Qwen3.5 122B and 35B models offer Sonnet 4.5 performance on local computers
+22. SpacetimeDB ThreeJS Support
+23. New evidence that Cantor plagiarized Dedekind?
+24. Werner Herzog Between Fact and Fiction
+25. Samsung Galaxy update removes Android recovery menu tools, including sideloading
+26. The whole thing was a scam
+27. The archivist preserving decaying floppy disks
+28. Deterministic Programming with LLMs
+29. 747s and coding agents
+30. The Eternal Promise: A History of Attempts to Eliminate Programmers

@@ -1,0 +1,65 @@
+# Дополнительные методы обхода защиты
+class AdvancedBypassMethods:
+    """
+    Методы обхода защиты помимо cloudscraper
+    """
+
+    @staticmethod
+    def method_1_selenium():
+        """Selenium с реальным браузером"""
+        from selenium import webdriver
+        from selenium.webdriver.chrome.options import Options
+
+        options = Options()
+        options.add_argument('--disable-blink-features=AutomationControlled')
+        options.add_experimental_option("excludeSwitches", ["enable-automation"])
+        options.add_experimental_option('useAutomationExtension', False)
+
+        driver = webdriver.Chrome(options=options)
+        driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
+        return driver
+
+    @staticmethod
+    def method_2_playwright():
+        """Playwright с evasion скриптами"""
+        from playwright.async_api import async_playwright
+
+        async def stealth_playwright():
+            async with async_playwright() as p:
+                browser = await p.chromium.launch(headless=False)
+                context = await browser.new_context()
+                page = await context.new_page()
+
+                # Скрываем признаки автоматизации
+                await page.add_init_script("""
+                    Object.defineProperty(navigator, 'webdriver', {
+                        get: () => undefined
+                    });
+                """)
+                return page
+
+    @staticmethod
+    def method_3_proxy_rotation():
+        """Ротация прокси"""
+        proxies = [
+            'http://proxy1:8080',
+            'http://proxy2:8080',
+            'http://proxy3:8080'
+        ]
+        return random.choice(proxies)
+
+    @staticmethod
+    def method_4_request_delays():
+        """Случайные задержки между запросами"""
+        import random
+        import time
+
+        # Задержка от 2 до 5 секунд с random jitter
+        delay = random.uniform(2, 5) + random.gauss(0, 0.5)
+        time.sleep(max(1, delay))
+
+    @staticmethod
+    def method_5_http2_support():
+        """Использование HTTP/2 (поддерживается cloudscraper)"""
+        # HTTP/2 сложнее обнаружить как бота
+        pass

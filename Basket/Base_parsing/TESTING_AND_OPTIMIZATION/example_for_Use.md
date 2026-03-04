@@ -2,12 +2,7 @@
 python scraper.py --url http://quotes.toscrape.com --output my_quotes
 
 # С дополнительными параметрами
-python scraper.py \
-    --url http://quotes.toscrape.com \
-    --output quotes \
-    --delay 3 \
-    --format json csv txt \
-    --config custom_config.yaml
+python scraper.py --url http://quotes.toscrape.com --output quotes --delay 3 --format json csv txt --config custom_config.yaml
 
 # Создание конфигурации по умолчанию
 python scraper.py --create-config

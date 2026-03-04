@@ -1,0 +1,30 @@
+def parse_with_fallback(soup):
+    """
+    Пытается найти заголовки разными способами
+    """
+
+    # Список возможных селекторов в порядке приоритета
+    selectors = [
+        ('class', 'titleline'),  # Текущий способ
+        ('class', 'storylink'),  # Старый класс Hacker News
+        ('css', 'tr.athing td.title > a'),  # Альтернативный CSS
+        ('tag', 'a.storylink'),  # По тегу и классу
+        ('css', '.title a'),  # Любая ссылка в заголовке
+    ]
+
+    for selector_type, selector_value in selectors:
+        try:
+            if selector_type == 'class':
+                elements = soup.find_all(class_=selector_value)
+            elif selector_type == 'css':
+                elements = soup.select(selector_value)
+            elif selector_type == 'tag':
+                elements = soup.find_all(selector_value)
+
+            if elements:
+                print(f"Найдено элементов по селектору {selector_type}:{selector_value}")
+                return elements
+        except:
+            continue
+
+    return []  # Ничего не найдено

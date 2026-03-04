@@ -1,0 +1,10 @@
+{
+  "url": "https://news.ycombinator.com/",
+  "selectors": [
+    "span.titleline a",
+    ".title a",
+    "tr.athing td.title a"
+  ],
+  "last_successful": null,
+  "fail_count": 1
+}

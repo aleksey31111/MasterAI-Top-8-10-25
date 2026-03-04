@@ -1,0 +1,93 @@
+import requests
+from bs4 import BeautifulSoup
+import time
+
+
+def parse_news_titles(url, selector_type, selector_value, link_within=True):
+    """
+    Универсальная функция для парсинга заголовков новостей
+
+    Параметры:
+    url: str - URL сайта
+    selector_type: str - тип селектора ('class', 'id', 'css', 'tag')
+    selector_value: str - значение селектора
+    link_within: bool - искать ли ссылку внутри элемента
+    """
+
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'}
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Выбор метода поиска в зависимости от типа селектора
+        if selector_type == 'class':
+            elements = soup.find_all(class_=selector_value)
+        elif selector_type == 'id':
+            elements = soup.find_all(id=selector_value)
+        elif selector_type == 'css':
+            elements = soup.select(selector_value)
+        elif selector_type == 'tag':
+            elements = soup.find_all(selector_value)
+        else:
+            raise ValueError(f"Неподдерживаемый тип селектора: {selector_type}")
+
+        titles = []
+        for i, element in enumerate(elements, 1):
+            if link_within:
+                # Ищем ссылку внутри элемента
+                link = element.find('a')
+                if link:
+                    title = link.get_text(strip=True)
+                else:
+                    title = element.get_text(strip=True)
+            else:
+                title = element.get_text(strip=True)
+
+            if title:  # Добавляем только непустые заголовки
+                titles.append(title)
+                print(f"  {i}. {title[:50]}...")
+
+        return titles
+
+    except Exception as e:
+        print(f"Ошибка при парсинге {url}: {e}")
+        return []
+
+
+# Примеры использования для разных сайтов
+sites_to_parse = [
+    {
+        'name': 'Hacker News',
+        'url': 'https://news.ycombinator.com/',
+        'selector_type': 'class',
+        'selector_value': 'titleline',
+        'link_within': True
+    },
+    {
+        'name': 'BBC News (пример)',
+        'url': 'https://www.bbc.com/news',
+        'selector_type': 'css',
+        'selector_value': 'h3[class*="title"]',
+        'link_within': False
+    },
+    {
+        'name': 'Reddit (пример)',
+        'url': 'https://www.reddit.com/top/',
+        'selector_type': 'tag',
+        'selector_value': 'h3',
+        'link_within': False
+    }
+]
+
+# Парсим все сайты
+for site in sites_to_parse:
+    print(f"\n--- Парсинг {site['name']} ---")
+    titles = parse_news_titles(
+        site['url'],
+        site['selector_type'],
+        site['selector_value'],
+        site['link_within']
+    )
+    print(f"Найдено заголовков: {len(titles)}")

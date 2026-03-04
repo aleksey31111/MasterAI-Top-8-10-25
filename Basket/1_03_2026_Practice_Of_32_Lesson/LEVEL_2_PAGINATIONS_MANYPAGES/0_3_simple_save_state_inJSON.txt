@@ -1,0 +1,75 @@
+import json
+import os
+from datetime import datetime
+
+
+class ResumableBookScraper:
+    def __init__(self, state_file='scraper_state.json', output_file='books.csv'):
+        self.state_file = state_file
+        self.output_file = output_file
+        self.state = self.load_state()
+
+    def load_state(self):
+        """Загружает состояние парсера из файла"""
+        if os.path.exists(self.state_file):
+            try:
+                with open(self.state_file, 'r') as f:
+                    return json.load(f)
+            except:
+                return self.initial_state()
+        return self.initial_state()
+
+    def initial_state(self):
+        """Начальное состояние парсера"""
+        return {
+            'last_page': 1,
+            'processed_books': [],
+            'total_books': 0,
+            'last_update': None,
+            'completed': False
+        }
+
+    def save_state(self):
+        """Сохраняет текущее состояние"""
+        self.state['last_update'] = datetime.now().isoformat()
+        with open(self.state_file, 'w') as f:
+            json.dump(self.state, f, indent=2)
+
+    def is_book_processed(self, book_url):
+        """Проверяет, была ли книга уже обработана"""
+        return book_url in self.state['processed_books']
+
+    def mark_book_processed(self, book_url):
+        """Отмечает книгу как обработанную"""
+        if book_url not in self.state['processed_books']:
+            self.state['processed_books'].append(book_url)
+            self.state['total_books'] += 1
+
+    def scrape_with_resume(self):
+        """Парсит книги с возможностью возобновления"""
+
+        print(f"🔄 Возобновление парсинга с страницы {self.state['last_page']}")
+        print(f"📚 Уже обработано книг: {self.state['total_books']}")
+
+        start_page = self.state['last_page']
+
+        for page in range(start_page, 51):  # 50 страниц всего
+            try:
+                print(f"📄 Обработка страницы {page}...")
+
+                # Здесь код парсинга страницы
+                # ...
+
+                # После успешной обработки страницы обновляем состояние
+                self.state['last_page'] = page + 1
+                self.save_state()
+
+                time.sleep(1)  # Вежливая задержка
+
+            except Exception as e:
+                print(f"❌ Ошибка на странице {page}: {e}")
+                print(f"💾 Прогресс сохранен. При следующем запуске продолжим с {page}")
+                break
+
+        self.state['completed'] = True
+        self.save_state()

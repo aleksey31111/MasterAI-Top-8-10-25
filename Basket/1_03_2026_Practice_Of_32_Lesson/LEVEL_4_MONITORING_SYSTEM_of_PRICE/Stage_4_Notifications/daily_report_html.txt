@@ -1,0 +1,24 @@
+<div style="background: #f0f7ff; padding: 15px; border-radius: 6px;">
+    <h3>📊 Статистика за день</h3>
+    <p>Всего товаров: <strong>3</strong></p>
+    <p>Товаров ниже порога: <strong>1</strong></p>
+    <p>Общая экономия: <strong>2000.00 ₽</strong></p>
+</div>
+
+<table>
+    <tr>
+        <th>Товар</th>
+        <th>Текущая цена</th>
+        <th>Порог</th>
+        <th>Пред. цена</th>
+        <th>Статус</th>
+    </tr>
+    <tr>
+        <td>Ноутбук Lenovo Legion</td>
+        <td>85000.00 ₽</td>
+        <td>90000</td>
+        <td>87000.00 ₽</td>
+        <td>⚠️ НИЖЕ ПОРОГА</td>
+    </tr>
+    ...
+</table>

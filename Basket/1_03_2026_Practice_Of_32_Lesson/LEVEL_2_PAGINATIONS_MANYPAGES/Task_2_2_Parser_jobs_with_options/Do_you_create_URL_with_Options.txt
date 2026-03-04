@@ -1,0 +1,39 @@
+def build_search_url(self, page: int = 1) -> str:
+    # Способ 1: Базовая пагинация (для первой страницы)
+    if page == 1:
+        url = self.BASE_URL
+    else:
+        # Способ 2: Пагинация через /page/N/ (реальная структура сайта)
+        url = f"{self.BASE_URL}page/{page}/"
+
+    # Способ 3: GET-параметры для фильтрации (имитация поиска)
+    params = {}
+    if self.query:
+        params['q'] = self.query
+    if self.location:
+        params['loc'] = self.location
+
+    if params:
+        # Способ 4: Использование urlencode для правильного кодирования
+        url += "?" + urlencode(params)
+
+    return url
+
+### Another way to create URL
+"""
+# Способ 5: Через f-строки (для простых случаев)
+url = f"https://realpython.github.io/fake-jobs/page/{page}/?q={query}&loc={location}"
+
+# Способ 6: Через urllib.parse.urljoin (для сложных базовых URL)
+from urllib.parse import urljoin
+base = "https://realpython.github.io/fake-jobs/"
+path = f"page/{page}/"
+url = urljoin(base, path)
+
+# Способ 7: Через urllib.parse.urlparse (для модификации существующих URL)
+from urllib.parse import urlparse, parse_qs, urlunparse
+parsed = urlparse(self.BASE_URL)
+query_dict = parse_qs(parsed.query)
+query_dict.update({'q': self.query})
+# ... сборка обратно
+"""

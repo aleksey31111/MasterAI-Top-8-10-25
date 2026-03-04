@@ -1,0 +1,9 @@
+E:\PythonCours\Python\
+├── 28-02-2026-ParsingSite_31-lesson\
+│   └── optimized_parser.py (текущий файл)
+│
+└── Basket\
+    └── 1_03_2026_Practice_Of_32_Lesson\
+        └── LEVEL_4_MONITORING_SYSTEM_of_PRICE\
+            └── Stage_2_Parser_of_price\
+                └── scraper.py (оригинальный парсер)

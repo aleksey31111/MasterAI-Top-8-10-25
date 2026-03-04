@@ -1,0 +1,65 @@
+def check_site_availability(self) -> bool:
+    """
+    Проверка доступности сайта перед началом парсинга
+
+    Returns:
+        bool: Доступен ли сайт
+    """
+    try:
+        logger.info(f"Проверка доступности сайта {self.BASE_URL}")
+        # Таймаут 5 секунд для быстрого отклика
+        response = self.session.get(self.BASE_URL, timeout=5)
+        response.raise_for_status()  # Проверка HTTP статуса
+        logger.info("✅ Сайт доступен")
+        return True
+
+    except requests.exceptions.ConnectionError:
+        logger.error("❌ Сайт недоступен: ошибка подключения")
+        return False
+    except requests.exceptions.Timeout:
+        logger.error("❌ Сайт недоступен: таймаут")
+        return False
+    except requests.exceptions.HTTPError as e:
+        logger.error(f"❌ Сайт вернул ошибку HTTP: {e}")
+        return False
+    except Exception as e:
+        logger.error(f"❌ Неожиданная ошибка при проверке сайта: {e}")
+        return False
+
+### Another Way
+def enhanced_site_check(self) -> dict:
+    """
+    Расширенная проверка доступности сайта
+    """
+    result = {
+        'available': False,
+        'response_time': None,
+        'status_code': None,
+        'content_type': None,
+        'error': None
+    }
+
+    try:
+        start_time = time.time()
+        response = self.session.get(self.BASE_URL, timeout=5)
+        end_time = time.time()
+
+        result['response_time'] = round(end_time - start_time, 2)
+        result['status_code'] = response.status_code
+        result['content_type'] = response.headers.get('content-type', 'unknown')
+
+        if response.status_code == 200:
+            result['available'] = True
+
+            # Дополнительная проверка: есть ли нужные элементы на странице
+            soup = BeautifulSoup(response.text, 'html.parser')
+            if soup.find('div', class_='card-content'):
+                result['structure_valid'] = True
+            else:
+                result['structure_valid'] = False
+                result['warning'] = "Структура страницы изменилась"
+
+    except Exception as e:
+        result['error'] = str(e)
+
+    return result

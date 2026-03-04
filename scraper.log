@@ -1,0 +1,27 @@
+2026-03-03 20:43:41,176 - job_parser - INFO - ============================================================
+2026-03-03 20:43:41,176 - job_parser - INFO - 🚀 ЗАПУСК ПАРСЕРА ВАКАНСИЙ
+2026-03-03 20:43:41,176 - job_parser - INFO - ============================================================
+2026-03-03 20:43:41,178 - job_parser - INFO - Параметры поиска:
+2026-03-03 20:43:41,178 - job_parser - INFO -   Запрос: 'python developer'
+2026-03-03 20:43:41,178 - job_parser - INFO -   Локация: 'London'
+2026-03-03 20:43:41,178 - job_parser - INFO -   Страниц: 3
+2026-03-03 20:43:41,178 - job_parser - INFO -   Формат: json
+2026-03-03 20:43:41,178 - job_parser - INFO - ============================================================
+2026-03-03 20:43:41,180 - job_parser - INFO - Проверка доступности сайта https://realpython.github.io/fake-jobs/
+2026-03-03 20:43:42,093 - job_parser - INFO - ✅ Сайт доступен
+2026-03-03 20:43:42,094 - job_parser - INFO - Начинаем сбор вакансий...
+2026-03-03 20:43:42,095 - job_parser - INFO - Парсинг страницы: https://realpython.github.io/fake-jobs/?q=python+developer&loc=london
+2026-03-03 20:43:42,238 - job_parser - INFO - Найдено карточек: 100
+2026-03-03 20:43:42,252 - job_parser - INFO - После фильтрации: 0 вакансий
+2026-03-03 20:43:42,253 - job_parser - INFO - Ожидание 1 секунды перед следующим запросом...
+2026-03-03 20:43:43,254 - job_parser - INFO - Парсинг страницы: https://realpython.github.io/fake-jobs/page/2/?q=python+developer&loc=london
+2026-03-03 20:43:43,451 - job_parser - ERROR - Ошибка при загрузке страницы https://realpython.github.io/fake-jobs/page/2/?q=python+developer&loc=london: 404 Client Error: Not Found for url: https://realpython.github.io/fake-jobs/page/2/?q=python+developer&loc=london
+2026-03-03 20:43:43,452 - job_parser - INFO - Ожидание 1 секунды перед следующим запросом...
+2026-03-03 20:43:44,454 - job_parser - INFO - Парсинг страницы: https://realpython.github.io/fake-jobs/page/3/?q=python+developer&loc=london
+2026-03-03 20:43:44,640 - job_parser - ERROR - Ошибка при загрузке страницы https://realpython.github.io/fake-jobs/page/3/?q=python+developer&loc=london: 404 Client Error: Not Found for url: https://realpython.github.io/fake-jobs/page/3/?q=python+developer&loc=london
+2026-03-03 20:43:44,641 - job_parser - INFO - ============================================================
+2026-03-03 20:43:44,643 - job_parser - INFO - 📊 ИТОГИ СБОРА:
+2026-03-03 20:43:44,643 - job_parser - INFO -    Найдено вакансий: 0
+2026-03-03 20:43:44,644 - job_parser - INFO -    Время выполнения: 2.55 сек
+2026-03-03 20:43:44,644 - job_parser - INFO - ============================================================
+2026-03-03 20:43:44,645 - job_parser - INFO - ✅ Парсинг завершен

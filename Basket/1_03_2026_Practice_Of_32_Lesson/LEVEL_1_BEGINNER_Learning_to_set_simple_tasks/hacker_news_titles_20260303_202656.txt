@@ -1,0 +1,33 @@
+Заголовки новостей с Hacker News (2026-03-03 20:26:56)
+============================================================
+
+1. I'm reluctant to verify my identity or age for any online services
+2. Physics Girl: Super-Kamiokande – Imaging the sun by detecting neutrinos [video]
+3. Pass-Through of Tariffs: Evidence from European Wine Imports
+4. The Xkcd thing, now interactive
+5. Claude's Cycles [pdf]
+6. Don't become an engineering manager
+7. Meta’s AI smart glasses and data privacy concerns
+8. Apple Introduces MacBook Pro with All‑New M5 Pro and M5 Max
+9. Launch HN: Cekura (YC F24) – Testing and monitoring for voice and chat AI agents
+10. British Columbia is permanently adopting daylight time
+11. I'm losing the SEO battle for my own open source project
+12. Arm's Cortex X925: Reaching Desktop Performance
+13. Points on a ring: An interactive walkthrough of a popular math problem
+14. Simplifying Application Architecture with Modular Design and MIM
+15. Ars Technica fires reporter after AI controversy involving fabricated quotes
+16. The Internet's Top Tech Publications Lost 58% of Their Google Traffic Since 2024
+17. India's top court angry after junior judge cites fake AI-generated orders
+18. Disable Your SSH access accidentally with scp
+19. Why No AI Games?
+20. Simple screw counter
+21. Computer Says No
+22. We Built a Video Rendering Engine by Lying to the Browser About What Time It Is
+23. TorchLean: Formalizing Neural Networks in Lean
+24. Show HN: I built a sub-500ms latency voice agent from scratch
+25. C64: Putting Sprite Multiplexing to Work
+26. Apple unveils new Studio Display and all-new Studio Display XDR
+27. I built a pint-sized Macintosh
+28. History of the Graphical User Interface: The Rise (and Fall?) Of WIMP Design
+29. FCC Chair Wants Networks to Pledge Loyalty for America's Big Bday
+30. DOS Memory Management

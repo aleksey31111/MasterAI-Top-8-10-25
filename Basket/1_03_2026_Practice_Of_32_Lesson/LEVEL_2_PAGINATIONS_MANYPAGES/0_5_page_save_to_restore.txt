@@ -1,0 +1,69 @@
+def scrape_with_auto_resume():
+    """
+    Парсит страницы, автоматически определяя, с какой продолжить
+    """
+    base_url = "http://books.toscrape.com/catalogue/page-{}.html"
+    output_file = "all_books.csv"
+    progress_file = "scraping_progress.txt"
+
+    # Определяем, с какой страницы начать
+    start_page = 1
+
+    # Проверяем, есть ли уже сохраненные данные
+    if os.path.exists(output_file):
+        with open(output_file, 'r', encoding='utf-8') as f:
+            # Считаем количество строк (минус заголовок)
+            lines = f.readlines()
+            if len(lines) > 1:
+                # Примерно 20 книг на страницу
+                books_done = len(lines) - 1
+                start_page = (books_done // 20) + 1
+                print(f"🔄 Найдено {books_done} уже сохраненных книг")
+                print(f"📄 Продолжаем с страницы {start_page}")
+
+    # Проверяем файл прогресса
+    if os.path.exists(progress_file):
+        with open(progress_file, 'r') as f:
+            saved_page = int(f.read().strip())
+            if saved_page > start_page:
+                start_page = saved_page
+                print(f"📌 По файлу прогресса начинаем с {start_page}")
+
+    # Парсим страницы
+    for page in range(start_page, 51):
+        try:
+            print(f"📄 Страница {page}/50...")
+
+            url = base_url.format(page)
+            response = requests.get(url)
+            soup = BeautifulSoup(response.text, 'html.parser')
+
+            # Парсим книги...
+            books = parse_page_books(soup)
+
+            # Сохраняем в CSV (добавляем к существующему файлу)
+            save_books_to_csv(books, output_file, append=True)
+
+            # Обновляем прогресс
+            with open(progress_file, 'w') as f:
+                f.write(str(page + 1))
+
+            # Сохраняем копию после каждых 5 страниц
+            if page % 5 == 0:
+                backup_file = f"backup_page_{page}.csv"
+                import shutil
+                shutil.copy2(output_file, backup_file)
+                print(f"💾 Создан бэкап: {backup_file}")
+
+            time.sleep(1)
+
+        except Exception as e:
+            print(f"❌ Ошибка на странице {page}: {e}")
+            print(f"💡 При следующем запуске продолжим с {page}")
+            break
+
+    # Очистка временных файлов при успешном завершении
+    if page == 50:
+        if os.path.exists(progress_file):
+            os.remove(progress_file)
+        print("✅ Парсинг полностью завершен, временные файлы удалены")

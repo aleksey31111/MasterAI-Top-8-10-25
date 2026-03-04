@@ -1,0 +1,63 @@
+{
+    "urls": [
+        {
+            "url": "https://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+            "name": "A Light in the Attic (книга)",
+            "threshold": 50.00,
+            "price_selector": ".price_color",
+            "name_selector": "h1"
+        },
+        {
+            "url": "https://books.toscrape.com/catalogue/tipping-the-velvet_999/index.html",
+            "name": "Tipping the Velvet (книга)",
+            "threshold": 45.00,
+            "price_selector": ".price_color",
+            "name_selector": "h1"
+        },
+        {
+            "url": "https://books.toscrape.com/catalogue/soumission_998/index.html",
+            "name": "Soumission (книга)",
+            "threshold": 55.00,
+            "price_selector": ".price_color",
+            "name_selector": "h1"
+        },
+        {
+            "url": "https://quotes.toscrape.com/",
+            "name": "Random Quote (цитаты)",
+            "threshold": 100.00,
+            "price_selector": ".text",
+            "name_selector": ".author"
+        },
+        {
+            "url": "https://httpbin.org/anything",
+            "name": "HTTP Test (тестовый)",
+            "threshold": 1000.00
+        }
+    ],
+    "check_interval": 300,
+    "db_path": "prices.db",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    "timeout": 30,
+    "request_delay": 2,
+    "verify_ssl": false,
+    "use_mock_on_error": true,
+    "notifications": {
+        "console": {
+            "enabled": true
+        },
+        "email": {
+            "enabled": false,
+            "smtp_server": "smtp.gmail.com",
+            "smtp_port": 587,
+            "sender": "aleksejbaskirov31@gmail.com",
+            "password": "uzcjgnkbeqqtffou",
+            "recipient": "aleksejbaskirov31@gmail.com"
+        },
+        "telegram": {
+            "enabled": false,
+            "bot_token": "YOUR_BOT_TOKEN",
+            "chat_id": "YOUR_CHAT_ID"
+        }
+    },
+    "log_level": "INFO"
+}

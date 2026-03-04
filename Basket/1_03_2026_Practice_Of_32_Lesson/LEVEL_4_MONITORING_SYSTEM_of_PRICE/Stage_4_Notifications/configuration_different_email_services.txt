@@ -1,0 +1,35 @@
+### Gmail
+email_config = {
+    'smtp_server': 'smtp.gmail.com',
+    'port': 587,
+    'sender': 'your-email@gmail.com',
+    'password': 'your-app-password',  # Пароль приложения, не основной!
+    'recipient': 'alerts@example.com'
+}
+
+### Yandex
+email_config = {
+    'smtp_server': 'smtp.yandex.ru',
+    'port': 587,
+    'sender': 'your-email@yandex.ru',
+    'password': 'your-app-password',
+    'recipient': 'alerts@example.com'
+}
+
+### Mail.ru
+email_config = {
+    'smtp_server': 'smtp.mail.ru',
+    'port': 587,
+    'sender': 'your-email@mail.ru',
+    'password': 'your-password',
+    'recipient': 'alerts@example.com'
+}
+
+### Miltrap (для тестирования):
+email_config = {
+    'smtp_server': 'sandbox.smtp.mailtrap.io',
+    'port': 2525,
+    'sender': 'test@example.com',
+    'password': 'your-mailtrap-password',
+    'recipient': 'test@example.com'
+}

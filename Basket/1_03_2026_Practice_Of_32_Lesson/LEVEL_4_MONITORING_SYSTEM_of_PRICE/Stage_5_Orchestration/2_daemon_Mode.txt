@@ -1,0 +1,2 @@
+python main.py --daemon
+python main.py --daemon --config my_config.json

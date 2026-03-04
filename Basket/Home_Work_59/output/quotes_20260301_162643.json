@@ -1,0 +1,1243 @@
+{
+  "metadata": {
+    "total_quotes": 97,
+    "pages_visited": 10,
+    "start_time": "2026-03-01T16:26:32.104401",
+    "end_time": "2026-03-01T16:26:43.483922",
+    "config": {
+      "scraper": {
+        "name": "QuoteScraper",
+        "base_url": "http://quotes.toscrape.com",
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "default_delay": 1,
+        "max_retries": 3,
+        "timeout": 10,
+        "respect_robots": true,
+        "max_pages": null
+      },
+      "selectors": {
+        "quote": "div.quote",
+        "text": "span.text",
+        "author": "small.author",
+        "tags": "a.tag",
+        "next_page": "li.next a"
+      },
+      "validation": {
+        "min_text_length": 5,
+        "max_text_length": 500,
+        "required_fields": [
+          "text",
+          "author"
+        ]
+      },
+      "output": {
+        "formats": [
+          "json",
+          "csv",
+          "txt"
+        ],
+        "encoding": "utf-8",
+        "pretty_print": true,
+        "directory": "output"
+      },
+      "logging": {
+        "level": "INFO",
+        "file": "logs/scraper.log",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+      }
+    }
+  },
+  "quotes": [
+    {
+      "text": "“The world as we have created it is a process of our thinking. It cannot be changed without changing our thinking.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "change",
+        "deep-thoughts",
+        "thinking",
+        "world"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "b4f9bf82a3a1e12aae2eb7e83e7c458c",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“It is our choices, Harry, that show what we truly are, far more than our abilities.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "abilities",
+        "choices"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "49db852fdf044e724abf9a1e7e0e897b",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“There are only two ways to live your life. One is as though nothing is a miracle. The other is as though everything is a miracle.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "inspirational",
+        "life",
+        "live",
+        "miracle",
+        "miracles"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "718258fa8ebebdd71ae6f544d7bd0beb",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.”",
+      "author": "Jane Austen",
+      "tags": [
+        "aliteracy",
+        "books",
+        "classic",
+        "humor"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "6ee1c53812b63e122f213eee49d9e93d",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“Imperfection is beauty, madness is genius and it's better to be absolutely ridiculous than absolutely boring.”",
+      "author": "Marilyn Monroe",
+      "tags": [
+        "be-yourself",
+        "inspirational"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "e5994ba084d5b562a1560f9bdd725873",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“Try not to become a man of success. Rather become a man of value.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "adulthood",
+        "success",
+        "value"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "dac9516ff9b88bb28267f7beff833753",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“It is better to be hated for what you are than to be loved for what you are not.”",
+      "author": "André Gide",
+      "tags": [
+        "life",
+        "love"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "2d0831dd5dffd2092726d04110838fda",
+      "timestamp": "2026-03-01T16:26:32.619315"
+    },
+    {
+      "text": "“I have not failed. I've just found 10,000 ways that won't work.”",
+      "author": "Thomas A. Edison",
+      "tags": [
+        "edison",
+        "failure",
+        "inspirational",
+        "paraphrased"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "dc6ebcfc3d5a959c0b33bceddffede5d",
+      "timestamp": "2026-03-01T16:26:32.620314"
+    },
+    {
+      "text": "“A woman is like a tea bag; you never know how strong it is until it's in hot water.”",
+      "author": "Eleanor Roosevelt",
+      "tags": [
+        "misattributed-eleanor-roosevelt"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "cf10d7b611929da505fe906ee73317cc",
+      "timestamp": "2026-03-01T16:26:32.620314"
+    },
+    {
+      "text": "“A day without sunshine is like, you know, night.”",
+      "author": "Steve Martin",
+      "tags": [
+        "humor",
+        "obvious",
+        "simile"
+      ],
+      "page": 1,
+      "url": "http://quotes.toscrape.com",
+      "hash": "a86823d4f75ee0e2ac4bc138bd8e9bb0",
+      "timestamp": "2026-03-01T16:26:32.620314"
+    },
+    {
+      "text": "“It takes a great deal of bravery to stand up to our enemies, but just as much to stand up to our friends.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "courage",
+        "friends"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "0075f4540ab81c0cba4aa4e5fada89b3",
+      "timestamp": "2026-03-01T16:26:33.984225"
+    },
+    {
+      "text": "“If you can't explain it to a six year old, you don't understand it yourself.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "simplicity",
+        "understand"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "45891b0de41149fa4bd9de98497a634b",
+      "timestamp": "2026-03-01T16:26:33.984225"
+    },
+    {
+      "text": "“I like nonsense, it wakes up the brain cells. Fantasy is a necessary ingredient in living.”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "fantasy"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "82ab720e33885436a52d20391edee8cf",
+      "timestamp": "2026-03-01T16:26:33.985224"
+    },
+    {
+      "text": "“I may not have gone where I intended to go, but I think I have ended up where I needed to be.”",
+      "author": "Douglas Adams",
+      "tags": [
+        "life",
+        "navigation"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "97afce000bf0753767f14402c1239723",
+      "timestamp": "2026-03-01T16:26:33.986188"
+    },
+    {
+      "text": "“The opposite of love is not hate, it's indifference. The opposite of art is not ugliness, it's indifference. The opposite of faith is not heresy, it's indifference. And the opposite of life is not death, it's indifference.”",
+      "author": "Elie Wiesel",
+      "tags": [
+        "activism",
+        "apathy",
+        "hate",
+        "indifference",
+        "inspirational",
+        "love",
+        "opposite",
+        "philosophy"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "c5402e7007e2a3514cfa02afb3809414",
+      "timestamp": "2026-03-01T16:26:33.987187"
+    },
+    {
+      "text": "“It is not a lack of love, but a lack of friendship that makes unhappy marriages.”",
+      "author": "Friedrich Nietzsche",
+      "tags": [
+        "friendship",
+        "lack-of-friendship",
+        "lack-of-love",
+        "love",
+        "marriage",
+        "unhappy-marriage"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "bb77915781a575e5fdc417bf8cf674b1",
+      "timestamp": "2026-03-01T16:26:33.988192"
+    },
+    {
+      "text": "“Good friends, good books, and a sleepy conscience: this is the ideal life.”",
+      "author": "Mark Twain",
+      "tags": [
+        "books",
+        "contentment",
+        "friends",
+        "friendship",
+        "life"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "ba46a3683b2ee599fc2af1a4982a60d5",
+      "timestamp": "2026-03-01T16:26:33.988192"
+    },
+    {
+      "text": "“Life is what happens to us while we are making other plans.”",
+      "author": "Allen Saunders",
+      "tags": [
+        "fate",
+        "life",
+        "misattributed-john-lennon",
+        "planning",
+        "plans"
+      ],
+      "page": 2,
+      "url": "http://quotes.toscrape.com/page/2/",
+      "hash": "ab0a1668d46343b054e2d94961c5ea36",
+      "timestamp": "2026-03-01T16:26:33.990185"
+    },
+    {
+      "text": "“I love you without knowing how, or when, or from where. I love you simply, without problems or pride: I love you in this way because I do not know any other way of loving but this, in which there is no I or you, so intimate that your hand upon my chest is my hand, so intimate that when I fall asleep your eyes close.”",
+      "author": "Pablo Neruda",
+      "tags": [
+        "love",
+        "poetry"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "9da3ea4608a4c2e04f058246f116308b",
+      "timestamp": "2026-03-01T16:26:35.183326"
+    },
+    {
+      "text": "“For every minute you are angry you lose sixty seconds of happiness.”",
+      "author": "Ralph Waldo Emerson",
+      "tags": [
+        "happiness"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "ca120fc7faebd3fa0fc6cfc031a2ee70",
+      "timestamp": "2026-03-01T16:26:35.183326"
+    },
+    {
+      "text": "“If you judge people, you have no time to love them.”",
+      "author": "Mother Teresa",
+      "tags": [
+        "attributed-no-source"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "5a858d77e85eba1f517877479b523749",
+      "timestamp": "2026-03-01T16:26:35.184349"
+    },
+    {
+      "text": "“Anyone who thinks sitting in church can make you a Christian must also think that sitting in a garage can make you a car.”",
+      "author": "Garrison Keillor",
+      "tags": [
+        "humor",
+        "religion"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "1b8ce67d95c146e5c392ccb817ae567c",
+      "timestamp": "2026-03-01T16:26:35.184349"
+    },
+    {
+      "text": "“Beauty is in the eye of the beholder and it may be necessary from time to time to give a stupid or misinformed beholder a black eye.”",
+      "author": "Jim Henson",
+      "tags": [
+        "humor"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "3e779b93ed86ee84b39f6293d889a512",
+      "timestamp": "2026-03-01T16:26:35.184349"
+    },
+    {
+      "text": "“Today you are You, that is truer than true. There is no one alive who is Youer than You.”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "comedy",
+        "life",
+        "yourself"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "3c212735c2e4febd42daabc1d523184b",
+      "timestamp": "2026-03-01T16:26:35.185348"
+    },
+    {
+      "text": "“If you want your children to be intelligent, read them fairy tales. If you want them to be more intelligent, read them more fairy tales.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "children",
+        "fairy-tales"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "411e96e17604decaa2fcc52005ade133",
+      "timestamp": "2026-03-01T16:26:35.185348"
+    },
+    {
+      "text": "“It is impossible to live without failing at something, unless you live so cautiously that you might as well not have lived at all - in which case, you fail by default.”",
+      "author": "J.K. Rowling",
+      "tags": [],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "5a2a066238455dad7f5fd4be79a4ce1e",
+      "timestamp": "2026-03-01T16:26:35.185348"
+    },
+    {
+      "text": "“Logic will get you from A to Z; imagination will get you everywhere.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "imagination"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "aad51c355aeb88740270c4694fbb8d5f",
+      "timestamp": "2026-03-01T16:26:35.186348"
+    },
+    {
+      "text": "“One good thing about music, when it hits you, you feel no pain.”",
+      "author": "Bob Marley",
+      "tags": [
+        "music"
+      ],
+      "page": 3,
+      "url": "http://quotes.toscrape.com/page/3/",
+      "hash": "135e2bcb6cf9864f12b0343d7209b1c2",
+      "timestamp": "2026-03-01T16:26:35.186348"
+    },
+    {
+      "text": "“The more that you read, the more things you will know. The more that you learn, the more places you'll go.”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "learning",
+        "reading",
+        "seuss"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "9225e2465703d672fbd77bea1dddddeb",
+      "timestamp": "2026-03-01T16:26:36.384595"
+    },
+    {
+      "text": "“Of course it is happening inside your head, Harry, but why on earth should that mean that it is not real?”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "dumbledore"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "a0f7646a1f10c66fbb7aba80fbad9822",
+      "timestamp": "2026-03-01T16:26:36.384595"
+    },
+    {
+      "text": "“The truth is, everyone is going to hurt you. You just got to find the ones worth suffering for.”",
+      "author": "Bob Marley",
+      "tags": [
+        "friendship"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "c4e0f4fb66007d89d0fec6ac86caee65",
+      "timestamp": "2026-03-01T16:26:36.384595"
+    },
+    {
+      "text": "“Not all of us can do great things. But we can do small things with great love.”",
+      "author": "Mother Teresa",
+      "tags": [
+        "misattributed-to-mother-teresa",
+        "paraphrased"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "736aeaa8995ce0088f33cf9a73175cc3",
+      "timestamp": "2026-03-01T16:26:36.385593"
+    },
+    {
+      "text": "“To the well-organized mind, death is but the next great adventure.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "death",
+        "inspirational"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "b59cac33f52438189898d6faf5014ccf",
+      "timestamp": "2026-03-01T16:26:36.385593"
+    },
+    {
+      "text": "“All you need is love. But a little chocolate now and then doesn't hurt.”",
+      "author": "Charles M. Schulz",
+      "tags": [
+        "chocolate",
+        "food",
+        "humor"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "8104b3189c8b13fa84aadb2a594a821f",
+      "timestamp": "2026-03-01T16:26:36.385593"
+    },
+    {
+      "text": "“We read to know we're not alone.”",
+      "author": "William Nicholson",
+      "tags": [
+        "misattributed-to-c-s-lewis",
+        "reading"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "e05b7527ffd34a2de3ccbd0548824a5a",
+      "timestamp": "2026-03-01T16:26:36.386592"
+    },
+    {
+      "text": "“Any fool can know. The point is to understand.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "knowledge",
+        "learning",
+        "understanding",
+        "wisdom"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "267e5d7ba780a45f7f7fe8bf0a879c51",
+      "timestamp": "2026-03-01T16:26:36.386592"
+    },
+    {
+      "text": "“I have always imagined that Paradise will be a kind of library.”",
+      "author": "Jorge Luis Borges",
+      "tags": [
+        "books",
+        "library"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "a38dadfae26850f25cc33f5cadea3cb0",
+      "timestamp": "2026-03-01T16:26:36.386592"
+    },
+    {
+      "text": "“It is never too late to be what you might have been.”",
+      "author": "George Eliot",
+      "tags": [
+        "inspirational"
+      ],
+      "page": 4,
+      "url": "http://quotes.toscrape.com/page/4/",
+      "hash": "1018d2e29ada9fa87729c9637960868a",
+      "timestamp": "2026-03-01T16:26:36.386592"
+    },
+    {
+      "text": "“A reader lives a thousand lives before he dies, said Jojen. The man who never reads lives only one.”",
+      "author": "George R.R. Martin",
+      "tags": [
+        "read",
+        "readers",
+        "reading",
+        "reading-books"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "887b708544d1b82f8480ef432772bba1",
+      "timestamp": "2026-03-01T16:26:37.559374"
+    },
+    {
+      "text": "“You can never get a cup of tea large enough or a book long enough to suit me.”",
+      "author": "C.S. Lewis",
+      "tags": [
+        "books",
+        "inspirational",
+        "reading",
+        "tea"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "d8d697349eb80bb02f272e1b0dc9da38",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“You believe lies so you eventually learn to trust no one but yourself.”",
+      "author": "Marilyn Monroe",
+      "tags": [],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "52ef9546646f6661c268b8d4d4cf7d98",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“If you can make a woman laugh, you can make her do anything.”",
+      "author": "Marilyn Monroe",
+      "tags": [
+        "girls",
+        "love"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "0860afecbe75abc2209564a9f0e46926",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“Life is like riding a bicycle. To keep your balance, you must keep moving.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "life",
+        "simile"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "f735d82c97cfc0f53a18aa76ea619ba3",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“The real lover is the man who can thrill you by kissing your forehead or smiling into your eyes or just staring into space.”",
+      "author": "Marilyn Monroe",
+      "tags": [
+        "love"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "e6c671e7a5fccc8962080a201028e369",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“A wise girl kisses but doesn't love, listens but doesn't believe, and leaves before she is left.”",
+      "author": "Marilyn Monroe",
+      "tags": [
+        "attributed-no-source"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "b0c049319709e97bd117a8e155ec5043",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“Only in the darkness can you see the stars.”",
+      "author": "Martin Luther King Jr.",
+      "tags": [
+        "hope",
+        "inspirational"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "98b9acb60fcfbba9f6d18b3f00951ae9",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“It matters not what someone is born, but what they grow to be.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "dumbledore"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "1da6913c55a8d268c8b30119e2ba24bb",
+      "timestamp": "2026-03-01T16:26:37.560373"
+    },
+    {
+      "text": "“Love does not begin and end the way we seem to think it does. Love is a battle, love is a war; love is a growing up.”",
+      "author": "James Baldwin",
+      "tags": [
+        "love"
+      ],
+      "page": 5,
+      "url": "http://quotes.toscrape.com/page/5/",
+      "hash": "534ba2888c5bbfd0ccc8382898517ee6",
+      "timestamp": "2026-03-01T16:26:37.561372"
+    },
+    {
+      "text": "“There is nothing I would not do for those who are really my friends. I have no notion of loving people by halves, it is not my nature.”",
+      "author": "Jane Austen",
+      "tags": [
+        "friendship",
+        "love"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "1e7eb3d16b424b8a0971bd83746bbbc7",
+      "timestamp": "2026-03-01T16:26:38.730592"
+    },
+    {
+      "text": "“Do one thing every day that scares you.”",
+      "author": "Eleanor Roosevelt",
+      "tags": [
+        "attributed",
+        "fear",
+        "inspiration"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "f7136e19c6229ad00887996c41fb43c5",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“I am good, but not an angel. I do sin, but I am not the devil. I am just a small girl in a big world trying to find someone to love.”",
+      "author": "Marilyn Monroe",
+      "tags": [
+        "attributed-no-source"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "7219e43dc24d1b06a00aea011c29c046",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“If I were not a physicist, I would probably be a musician. I often think in music. I live my daydreams in music. I see my life in terms of music.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "music"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "9e4a2e29881ed5e5f62e5baa3dc36dee",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“If you only read the books that everyone else is reading, you can only think what everyone else is thinking.”",
+      "author": "Haruki Murakami",
+      "tags": [
+        "books",
+        "thought"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "ad390e313751112b4358ee021d93faf8",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“The difference between genius and stupidity is: genius has its limits.”",
+      "author": "Alexandre Dumas fils",
+      "tags": [
+        "misattributed-to-einstein"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "26e837ed4eb81f7459ab50fc33db2e36",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“He's like a drug for you, Bella.”",
+      "author": "Stephenie Meyer",
+      "tags": [
+        "drug",
+        "romance",
+        "simile"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "c37a984b6fdae20dcd5819c1401d1859",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“There is no friend as loyal as a book.”",
+      "author": "Ernest Hemingway",
+      "tags": [
+        "books",
+        "friends",
+        "novelist-quotes"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "f3607a4b7ff29fd43b5b504a6d764e4c",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“When one door of happiness closes, another opens; but often we look so long at the closed door that we do not see the one which has been opened for us.”",
+      "author": "Helen Keller",
+      "tags": [
+        "inspirational"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "496ae7d89d251fa26ea0177528d7255e",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“Life isn't about finding yourself. Life is about creating yourself.”",
+      "author": "George Bernard Shaw",
+      "tags": [
+        "inspirational",
+        "life",
+        "yourself"
+      ],
+      "page": 6,
+      "url": "http://quotes.toscrape.com/page/6/",
+      "hash": "f7ad00e9718d0df921be59771d715a6d",
+      "timestamp": "2026-03-01T16:26:38.731591"
+    },
+    {
+      "text": "“That's the problem with drinking, I thought, as I poured myself a drink. If something bad happens you drink in an attempt to forget; if something good happens you drink in order to celebrate; and if nothing happens you drink to make something happen.”",
+      "author": "Charles Bukowski",
+      "tags": [
+        "alcohol"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "188dd35e536d6ecbb6d0501f2c617446",
+      "timestamp": "2026-03-01T16:26:39.905411"
+    },
+    {
+      "text": "“You don’t forget the face of the person who was your last hope.”",
+      "author": "Suzanne Collins",
+      "tags": [
+        "the-hunger-games"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "f6d94b5ee121599981ff6d23d253cfda",
+      "timestamp": "2026-03-01T16:26:39.905411"
+    },
+    {
+      "text": "“Remember, we're madly in love, so it's all right to kiss me anytime you feel like it.”",
+      "author": "Suzanne Collins",
+      "tags": [
+        "humor"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "47002afe34cc7a19b2fe475d5ccf8b9e",
+      "timestamp": "2026-03-01T16:26:39.906410"
+    },
+    {
+      "text": "“Not all those who wander are lost.”",
+      "author": "J.R.R. Tolkien",
+      "tags": [
+        "bilbo",
+        "journey",
+        "lost",
+        "quest",
+        "travel",
+        "wander"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "1f3a9e9fc84859d8d75f83c5483b2805",
+      "timestamp": "2026-03-01T16:26:39.906410"
+    },
+    {
+      "text": "“Do not pity the dead, Harry. Pity the living, and, above all those who live without love.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "live-death-love"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "24743d18b3f2e64b500379d00eafeb45",
+      "timestamp": "2026-03-01T16:26:39.906410"
+    },
+    {
+      "text": "“There is nothing to writing. All you do is sit down at a typewriter and bleed.”",
+      "author": "Ernest Hemingway",
+      "tags": [
+        "good",
+        "writing"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "c148e83ef59794a7c6fc9dd6bf2646cf",
+      "timestamp": "2026-03-01T16:26:39.906410"
+    },
+    {
+      "text": "“Finish each day and be done with it. You have done what you could. Some blunders and absurdities no doubt crept in; forget them as soon as you can. Tomorrow is a new day. You shall begin it serenely and with too high a spirit to be encumbered with your old nonsense.”",
+      "author": "Ralph Waldo Emerson",
+      "tags": [
+        "life",
+        "regrets"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "b36b9d9d1234f51697e60dcdf17aed04",
+      "timestamp": "2026-03-01T16:26:39.907409"
+    },
+    {
+      "text": "“I have never let my schooling interfere with my education.”",
+      "author": "Mark Twain",
+      "tags": [
+        "education"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "b14a62b2aea4e99448bc12c58c722739",
+      "timestamp": "2026-03-01T16:26:39.907409"
+    },
+    {
+      "text": "“I have heard there are troubles of more than one kind. Some come from ahead and some come from behind. But I've bought a big bat. I'm all ready you see. Now my troubles are going to have troubles with me!”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "troubles"
+      ],
+      "page": 7,
+      "url": "http://quotes.toscrape.com/page/7/",
+      "hash": "bc1c9a3763173de9de7a187e4e2b47f9",
+      "timestamp": "2026-03-01T16:26:39.907409"
+    },
+    {
+      "text": "“If I had a flower for every time I thought of you...I could walk through my garden forever.”",
+      "author": "Alfred Tennyson",
+      "tags": [
+        "friendship",
+        "love"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "51caa07626ba3a33d206e72b40366d88",
+      "timestamp": "2026-03-01T16:26:41.100071"
+    },
+    {
+      "text": "“Some people never go crazy. What truly horrible lives they must lead.”",
+      "author": "Charles Bukowski",
+      "tags": [
+        "humor"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "9d080d2451124612f2d8ee57ae5f35ea",
+      "timestamp": "2026-03-01T16:26:41.101072"
+    },
+    {
+      "text": "“The trouble with having an open mind, of course, is that people will insist on coming along and trying to put things in it.”",
+      "author": "Terry Pratchett",
+      "tags": [
+        "humor",
+        "open-mind",
+        "thinking"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "aa13aa6a7394131676d34fdc2106045d",
+      "timestamp": "2026-03-01T16:26:41.101072"
+    },
+    {
+      "text": "“Think left and think right and think low and think high. Oh, the thinks you can think up if only you try!”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "humor",
+        "philosophy"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "de7dd38572ae0b25a8d74b172104422e",
+      "timestamp": "2026-03-01T16:26:41.101072"
+    },
+    {
+      "text": "“What really knocks me out is a book that, when you're all done reading it, you wish the author that wrote it was a terrific friend of yours and you could call him up on the phone whenever you felt like it. That doesn't happen much, though.”",
+      "author": "J.D. Salinger",
+      "tags": [
+        "authors",
+        "books",
+        "literature",
+        "reading",
+        "writing"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "6f23680c917c0746b73497f1c41eb7c8",
+      "timestamp": "2026-03-01T16:26:41.102069"
+    },
+    {
+      "text": "“The reason I talk to myself is because I’m the only one whose answers I accept.”",
+      "author": "George Carlin",
+      "tags": [
+        "humor",
+        "insanity",
+        "lies",
+        "lying",
+        "self-indulgence",
+        "truth"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "c1ea9973f21d9625aef6e4e1626ad502",
+      "timestamp": "2026-03-01T16:26:41.102069"
+    },
+    {
+      "text": "“You may say I'm a dreamer, but I'm not the only one. I hope someday you'll join us. And the world will live as one.”",
+      "author": "John Lennon",
+      "tags": [
+        "beatles",
+        "connection",
+        "dreamers",
+        "dreaming",
+        "dreams",
+        "hope",
+        "inspirational",
+        "peace"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "d114e671a2723673cbe89ccc38c8031f",
+      "timestamp": "2026-03-01T16:26:41.103068"
+    },
+    {
+      "text": "“I am free of all prejudice. I hate everyone equally. ”",
+      "author": "W.C. Fields",
+      "tags": [
+        "humor",
+        "sinister"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "baea093d859aac6c6e53503c8ab01c1e",
+      "timestamp": "2026-03-01T16:26:41.103068"
+    },
+    {
+      "text": "“The question isn't who is going to let me; it's who is going to stop me.”",
+      "author": "Ayn Rand",
+      "tags": [],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "eaedbf45e13724c2bd9402ae7fa9de39",
+      "timestamp": "2026-03-01T16:26:41.103068"
+    },
+    {
+      "text": "“′Classic′ - a book which people praise and don't read.”",
+      "author": "Mark Twain",
+      "tags": [
+        "books",
+        "classic",
+        "reading"
+      ],
+      "page": 8,
+      "url": "http://quotes.toscrape.com/page/8/",
+      "hash": "58d3713a9d858de726e3f57b47aaf4da",
+      "timestamp": "2026-03-01T16:26:41.104068"
+    },
+    {
+      "text": "“Anyone who has never made a mistake has never tried anything new.”",
+      "author": "Albert Einstein",
+      "tags": [
+        "mistakes"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "c9ccd06b77f18f0b0e2cc443979c1673",
+      "timestamp": "2026-03-01T16:26:42.301310"
+    },
+    {
+      "text": "“A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony in a moment.”",
+      "author": "Jane Austen",
+      "tags": [
+        "humor",
+        "love",
+        "romantic",
+        "women"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "a28d9fa0e87d4c290ece06f346d809df",
+      "timestamp": "2026-03-01T16:26:42.301310"
+    },
+    {
+      "text": "“Remember, if the time should come when you have to make a choice between what is right and what is easy, remember what happened to a boy who was good, and kind, and brave, because he strayed across the path of Lord Voldemort. Remember Cedric Diggory.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "integrity"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "dbaac1aaf017902a9cf1af566868069d",
+      "timestamp": "2026-03-01T16:26:42.301310"
+    },
+    {
+      "text": "“I declare after all there is no enjoyment like reading! How much sooner one tires of any thing than of a book! -- When I have a house of my own, I shall be miserable if I have not an excellent library.”",
+      "author": "Jane Austen",
+      "tags": [
+        "books",
+        "library",
+        "reading"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "337bed29f5c2801c633d26194d444fcb",
+      "timestamp": "2026-03-01T16:26:42.302308"
+    },
+    {
+      "text": "“There are few people whom I really love, and still fewer of whom I think well. The more I see of the world, the more am I dissatisfied with it; and every day confirms my belief of the inconsistency of all human characters, and of the little dependence that can be placed on the appearance of merit or sense.”",
+      "author": "Jane Austen",
+      "tags": [
+        "elizabeth-bennet",
+        "jane-austen"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "3ff9157fc1e8d82a2b92e4302883e451",
+      "timestamp": "2026-03-01T16:26:42.302308"
+    },
+    {
+      "text": "“Some day you will be old enough to start reading fairy tales again.”",
+      "author": "C.S. Lewis",
+      "tags": [
+        "age",
+        "fairytales",
+        "growing-up"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "6bcb1ce6f08a0b04cf80513d4c316b3a",
+      "timestamp": "2026-03-01T16:26:42.303308"
+    },
+    {
+      "text": "“We are not necessarily doubting that God will do the best for us; we are wondering how painful the best will turn out to be.”",
+      "author": "C.S. Lewis",
+      "tags": [
+        "god"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "edce631743d02f2b39345f67f68f325a",
+      "timestamp": "2026-03-01T16:26:42.303308"
+    },
+    {
+      "text": "“The fear of death follows from the fear of life. A man who lives fully is prepared to die at any time.”",
+      "author": "Mark Twain",
+      "tags": [
+        "death",
+        "life"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "037fa66aa4f3da7c51047b4ff9ebada6",
+      "timestamp": "2026-03-01T16:26:42.303308"
+    },
+    {
+      "text": "“A lie can travel half way around the world while the truth is putting on its shoes.”",
+      "author": "Mark Twain",
+      "tags": [
+        "misattributed-mark-twain",
+        "truth"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "b513b33d49a4b2b992d1dab72ac723e7",
+      "timestamp": "2026-03-01T16:26:42.304307"
+    },
+    {
+      "text": "“I believe in Christianity as I believe that the sun has risen: not only because I see it, but because by it I see everything else.”",
+      "author": "C.S. Lewis",
+      "tags": [
+        "christianity",
+        "faith",
+        "religion",
+        "sun"
+      ],
+      "page": 9,
+      "url": "http://quotes.toscrape.com/page/9/",
+      "hash": "0188b0a89f83afabacfa5afebba641a8",
+      "timestamp": "2026-03-01T16:26:42.304307"
+    },
+    {
+      "text": "“The truth.\" Dumbledore sighed. \"It is a beautiful and terrible thing, and should therefore be treated with great caution.”",
+      "author": "J.K. Rowling",
+      "tags": [
+        "truth"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "fd699dcd21397e7983de47d24289a8a1",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“I'm the one that's got to die when it's time for me to die, so let me live my life the way I want to.”",
+      "author": "Jimi Hendrix",
+      "tags": [
+        "death",
+        "life"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "10c5019ca00074770b54daf466a46e28",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“To die will be an awfully big adventure.”",
+      "author": "J.M. Barrie",
+      "tags": [
+        "adventure",
+        "love"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "fe6f5103ae67463a4f4db35aecd98356",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“It takes courage to grow up and become who you really are.”",
+      "author": "E.E. Cummings",
+      "tags": [
+        "courage"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "62b07d5e410990f1109d2c420efe6173",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“But better to get hurt by the truth than comforted with a lie.”",
+      "author": "Khaled Hosseini",
+      "tags": [
+        "life"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "110e9f6b6c55f0eede960ab46d68309c",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“You never really understand a person until you consider things from his point of view... Until you climb inside of his skin and walk around in it.”",
+      "author": "Harper Lee",
+      "tags": [
+        "better-life-empathy"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "ef71ecf50347d3b1f628b0db5848440a",
+      "timestamp": "2026-03-01T16:26:43.478928"
+    },
+    {
+      "text": "“You have to write the book that wants to be written. And if the book will be too difficult for grown-ups, then you write it for children.”",
+      "author": "Madeleine L'Engle",
+      "tags": [
+        "books",
+        "children",
+        "difficult",
+        "grown-ups",
+        "write",
+        "writers",
+        "writing"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "88759c748f5522ea776f7e2e85aca005",
+      "timestamp": "2026-03-01T16:26:43.479927"
+    },
+    {
+      "text": "“Never tell the truth to people who are not worthy of it.”",
+      "author": "Mark Twain",
+      "tags": [
+        "truth"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "fdd13103991b555b886e3fcc0c8ddd1b",
+      "timestamp": "2026-03-01T16:26:43.479927"
+    },
+    {
+      "text": "“A person's a person, no matter how small.”",
+      "author": "Dr. Seuss",
+      "tags": [
+        "inspirational"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "66bdc6b6fd6e39d3405e9372e012d2bb",
+      "timestamp": "2026-03-01T16:26:43.479927"
+    },
+    {
+      "text": "“... a mind needs books as a sword needs a whetstone, if it is to keep its edge.”",
+      "author": "George R.R. Martin",
+      "tags": [
+        "books",
+        "mind"
+      ],
+      "page": 10,
+      "url": "http://quotes.toscrape.com/page/10/",
+      "hash": "db3d11e8768908a29a46fa96ca23b1ca",
+      "timestamp": "2026-03-01T16:26:43.479927"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+import re
+
+
+def smart_title_search(soup):
+    """
+    Умный поиск заголовков по различным признакам
+    """
+    titles = []
+
+    # Ищем по паттернам, характерным для заголовков
+    patterns = [
+        # Классы, содержащие слова title или headline
+        soup.find_all(class_=re.compile(r'title|headline|story', re.I)),
+
+        # Заголовочные теги
+        soup.find_all(['h1', 'h2', 'h3']),
+
+        # Ссылки с определенными классами
+        soup.find_all('a', class_=re.compile(r'title|story|link', re.I)),
+
+        # Элементы с атрибутами, характерными для заголовков
+        soup.find_all(attrs={'itemprop': 'headline'}),
+        soup.find_all(attrs={'property': 'og:title'}),
+    ]
+
+    for elements in patterns:
+        for element in elements:
+            text = element.get_text(strip=True)
+            # Проверяем, похож ли текст на заголовок
+            if (text and
+                    len(text) > 10 and  # Не слишком короткий
+                    len(text) < 200 and  # Не слишком длинный
+                    not text.startswith(('http', 'www')) and  # Не ссылка
+                    text.count(' ') > 2):  # Есть несколько слов
+                titles.append(text)
+
+    return list(dict.fromkeys(titles))  # Убираем дубликаты

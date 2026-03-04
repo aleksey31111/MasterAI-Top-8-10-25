@@ -1,0 +1,33 @@
+Заголовки новостей с Hacker News (2026-03-03 00:27:42)
+============================================================
+
+1. Motorola announces a partnership with GrapheneOS
+2. First in-utero stem cell therapy for fetal spina bifida repair is safe: study
+3. New iPad Air, powered by M4
+4. Show HN: Govbase – Follow a bill from source text to news bias to social posts
+5. LFortran Compiles Fpm
+6. "That Shape Had None" – A Horror of Substrate Independence (Short Fiction)
+7. Launch HN: OctaPulse (YC W26) – Robotics and computer vision for fish farming
+8. Show HN: uBlock filter list to blur all Instagram Reels
+9. Ask HN: Who is hiring? (March 2026)
+10. British Columbia to end time changes, adopt year-round daylight time
+11. Ask HN: Who wants to be hired? (March 2026)
+12. How to talk to anyone and why you should
+13. Packaging a Gleam app into a single executable
+14. Parallel coding agents with tmux and Markdown specs
+15. Reflex (YC W23) Is Hiring Software Engineers – Python
+16. Inside the M4 Apple Neural Engine, Part 1: Reverse Engineering
+17. A case for Go as the best language for AI agents
+18. iPhone 17e
+19. Use the Mikado Method to do safe changes in a complex codebase
+20. Show HN: Pianoterm – Run shell commands from your Piano. A Linux CLI tool
+21. Zclaw – The 888 KiB Assistant
+22. Why Objective-C
+23. Build your own Command Line with ANSI escape codes (2016)
+24. Language Model Contains Personality Subnetworks
+25. Microsoft bans the word "Microslop" on its Discord, then locks the server
+26. Boss-CSS: I created another "CSS-in-JS" lib
+27. Making Video Games in 2025 (without an engine)
+28. 19th century silent film that first captured a robot attack
+29. Notes on Lagrange Interpolating Polynomials
+30. OpenClaw surpasses React to become the most-starred software project on GitHub

@@ -1,0 +1,14 @@
+# DEBUG (слишком подробно для пользователя)
+logger.debug(f"Статус код ответа: {response.status_code}")
+logger.debug(f"Заголовки ответа: {response.headers}")
+logger.debug(f"Найден элемент: {soup.find('h2')}")
+
+# INFO (полезно для пользователя)
+logger.info(f"Парсинг страницы: {url}")
+logger.info(f"Найдено карточек: {len(job_cards)}")
+
+# WARNING (проблемы, не останавливающие работу)
+logger.warning("На странице не найдено карточек вакансий")
+
+# ERROR (критические проблемы)
+logger.error(f"Ошибка при загрузке страницы: {e}")

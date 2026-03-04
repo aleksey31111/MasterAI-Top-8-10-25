@@ -1,0 +1,88 @@
+import sqlite3
+
+
+class DatabaseScraper:
+    def __init__(self, db_name='books.db'):
+        self.conn = sqlite3.connect(db_name)
+        self.create_tables()
+
+    def create_tables(self):
+        """Создает таблицы для хранения данных и прогресса"""
+        cursor = self.conn.cursor()
+
+        # Таблица для книг
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS books (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                title TEXT UNIQUE,
+                price TEXT,
+                availability TEXT,
+                rating TEXT,
+                url TEXT,
+                page INTEGER,
+                scraped_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+
+        # Таблица для отслеживания прогресса
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS scraping_progress (
+                id INTEGER PRIMARY KEY,
+                last_page INTEGER,
+                completed_pages TEXT,
+                status TEXT,
+                updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            )
+        ''')
+
+        self.conn.commit()
+
+    def is_page_scraped(self, page):
+        """Проверяет, была ли страница уже обработана"""
+        cursor = self.conn.cursor()
+        cursor.execute('''
+            SELECT COUNT(*) FROM books WHERE page = ?
+        ''', (page,))
+        count = cursor.fetchone()[0]
+        return count > 0
+
+    def save_books(self, books, page):
+        """Сохраняет книги в БД"""
+        cursor = self.conn.cursor()
+
+        for book in books:
+            try:
+                cursor.execute('''
+                    INSERT OR IGNORE INTO books 
+                    (title, price, availability, rating, url, page)
+                    VALUES (?, ?, ?, ?, ?, ?)
+                ''', (
+                    book['title'],
+                    book['price'],
+                    book['availability'],
+                    book['rating'],
+                    book['url'],
+                    page
+                ))
+            except Exception as e:
+                print(f"Ошибка при сохранении книги {book['title']}: {e}")
+
+        self.conn.commit()
+
+    def get_next_page(self):
+        """Определяет следующую необработанную страницу"""
+        cursor = self.conn.cursor()
+
+        # Получаем максимальную обработанную страницу
+        cursor.execute('SELECT MAX(page) FROM books')
+        max_page = cursor.fetchone()[0]
+
+        if max_page is None:
+            return 1
+
+        # Проверяем, все ли страницы до max_page обработаны
+        for page in range(1, max_page):
+            if not self.is_page_scraped(page):
+                return page
+
+        return max_page + 1

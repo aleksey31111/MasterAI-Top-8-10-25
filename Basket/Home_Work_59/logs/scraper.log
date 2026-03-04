@@ -62,3 +62,67 @@
 2026-03-01 00:42:18,119 - QuoteScraper - INFO - 💾 JSON сохранён: output\quotes_20260301_004218.json
 2026-03-01 00:42:18,125 - QuoteScraper - INFO - 💾 CSV сохранён: output\quotes_20260301_004218.csv
 2026-03-01 00:42:18,129 - QuoteScraper - INFO - 💾 TXT сохранён: output\quotes_20260301_004218.txt
+2026-03-01 16:26:32,101 - QuoteScraper - INFO - 🚀 Парсер инициализирован
+2026-03-01 16:26:32,104 - QuoteScraper - INFO - ============================================================
+2026-03-01 16:26:32,105 - QuoteScraper - INFO - 🚀 НАЧАЛО СБОРА ЦИТАТ
+2026-03-01 16:26:32,105 - QuoteScraper - INFO - 📌 Стартовый URL: http://quotes.toscrape.com
+2026-03-01 16:26:32,105 - QuoteScraper - INFO - ============================================================
+2026-03-01 16:26:32,440 - QuoteScraper - INFO - ✅ robots.txt проверен, парсинг разрешён
+2026-03-01 16:26:32,451 - QuoteScraper - INFO - 📄 Страница 1: http://quotes.toscrape.com
+2026-03-01 16:26:32,618 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 1
+2026-03-01 16:26:32,620 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 1
+2026-03-01 16:26:32,621 - QuoteScraper - INFO - 📄 Страница 2: http://quotes.toscrape.com/page/2/
+2026-03-01 16:26:33,982 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 2
+2026-03-01 16:26:33,990 - QuoteScraper - INFO - ✅ Собрано 8 уникальных цитат со страницы 2
+2026-03-01 16:26:33,999 - QuoteScraper - INFO - 📄 Страница 3: http://quotes.toscrape.com/page/3/
+2026-03-01 16:26:35,182 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 3
+2026-03-01 16:26:35,186 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 3
+2026-03-01 16:26:35,190 - QuoteScraper - INFO - 📄 Страница 4: http://quotes.toscrape.com/page/4/
+2026-03-01 16:26:36,383 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 4
+2026-03-01 16:26:36,386 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 4
+2026-03-01 16:26:36,390 - QuoteScraper - INFO - 📄 Страница 5: http://quotes.toscrape.com/page/5/
+2026-03-01 16:26:37,559 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 5
+2026-03-01 16:26:37,561 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 5
+2026-03-01 16:26:37,562 - QuoteScraper - INFO - 📄 Страница 6: http://quotes.toscrape.com/page/6/
+2026-03-01 16:26:38,730 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 6
+2026-03-01 16:26:38,731 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 6
+2026-03-01 16:26:38,733 - QuoteScraper - INFO - 📄 Страница 7: http://quotes.toscrape.com/page/7/
+2026-03-01 16:26:39,905 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 7
+2026-03-01 16:26:39,907 - QuoteScraper - INFO - ✅ Собрано 9 уникальных цитат со страницы 7
+2026-03-01 16:26:39,909 - QuoteScraper - INFO - 📄 Страница 8: http://quotes.toscrape.com/page/8/
+2026-03-01 16:26:41,099 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 8
+2026-03-01 16:26:41,104 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 8
+2026-03-01 16:26:41,108 - QuoteScraper - INFO - 📄 Страница 9: http://quotes.toscrape.com/page/9/
+2026-03-01 16:26:42,300 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 9
+2026-03-01 16:26:42,304 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 9
+2026-03-01 16:26:42,308 - QuoteScraper - INFO - 📄 Страница 10: http://quotes.toscrape.com/page/10/
+2026-03-01 16:26:43,477 - QuoteScraper - INFO - 🔍 Найдено 10 цитат на странице 10
+2026-03-01 16:26:43,479 - QuoteScraper - INFO - ✅ Собрано 10 уникальных цитат со страницы 10
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ============================================================
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - 📊 СТАТИСТИКА СБОРА
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ============================================================
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - 📄 Страниц обработано: 10
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - 🔍 Всего цитат найдено: 100
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ✨ Уникальных цитат: 97
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - 🔄 Дубликатов: 0
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ❌ Ошибок: 0
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ⏱️  Время выполнения: 11.4 сек
+2026-03-01 16:26:43,483 - QuoteScraper - INFO - ⚡ Скорость: 8.5 цитат/сек
+2026-03-01 16:26:43,484 - QuoteScraper - INFO - 
+🏆 Топ-5 авторов:
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • Albert Einstein: 10 цитат
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • J.K. Rowling: 9 цитат
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • Marilyn Monroe: 6 цитат
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • Dr. Seuss: 6 цитат
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • Mark Twain: 6 цитат
+2026-03-01 16:26:43,484 - QuoteScraper - INFO - 
+🏷️  Топ-5 тегов:
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • #inspirational: 12 раз
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • #life: 12 раз
+2026-03-01 16:26:43,484 - QuoteScraper - INFO -    • #humor: 12 раз
+2026-03-01 16:26:43,485 - QuoteScraper - INFO -    • #books: 11 раз
+2026-03-01 16:26:43,485 - QuoteScraper - INFO -    • #love: 11 раз
+2026-03-01 16:26:43,485 - QuoteScraper - INFO - ============================================================
+2026-03-01 16:26:43,494 - QuoteScraper - INFO - 💾 JSON сохранён: output\quotes_20260301_162643.json
+2026-03-01 16:26:43,497 - QuoteScraper - INFO - 💾 CSV сохранён: output\quotes_20260301_162643.csv
+2026-03-01 16:26:43,501 - QuoteScraper - INFO - 💾 TXT сохранён: output\quotes_20260301_162643.txt

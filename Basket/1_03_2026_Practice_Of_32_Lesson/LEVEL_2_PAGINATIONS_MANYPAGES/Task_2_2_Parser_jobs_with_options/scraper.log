@@ -1,0 +1,31 @@
+2026-03-01 13:13:27,043 - job_parser - INFO - ============================================================
+2026-03-01 13:13:27,043 - job_parser - INFO - 🚀 ЗАПУСК ПАРСЕРА ВАКАНСИЙ
+2026-03-01 13:13:27,043 - job_parser - INFO - ============================================================
+2026-03-01 13:13:27,043 - job_parser - INFO - Параметры поиска:
+2026-03-01 13:13:27,044 - job_parser - INFO -   Запрос: 'все'
+2026-03-01 13:13:27,044 - job_parser - INFO -   Локация: 'все'
+2026-03-01 13:13:27,044 - job_parser - INFO -   Страниц: 1
+2026-03-01 13:13:27,044 - job_parser - INFO -   Формат: csv
+2026-03-01 13:13:27,044 - job_parser - INFO - ============================================================
+2026-03-01 13:13:27,044 - job_parser - INFO - Проверка доступности сайта https://realpython.github.io/fake-jobs/
+2026-03-01 13:13:27,885 - job_parser - INFO - ✅ Сайт доступен
+2026-03-01 13:13:27,886 - job_parser - INFO - Начинаем сбор вакансий...
+2026-03-01 13:13:27,886 - job_parser - INFO - Парсинг страницы: https://realpython.github.io/fake-jobs/
+2026-03-01 13:13:28,074 - job_parser - INFO - Найдено карточек: 100
+2026-03-01 13:13:28,091 - job_parser - INFO - После фильтрации: 100 вакансий
+2026-03-01 13:13:28,092 - job_parser - INFO - ============================================================
+2026-03-01 13:13:28,092 - job_parser - INFO - 📊 ИТОГИ СБОРА:
+2026-03-01 13:13:28,092 - job_parser - INFO -    Найдено вакансий: 100
+2026-03-01 13:13:28,092 - job_parser - INFO -    Время выполнения: 0.21 сек
+2026-03-01 13:13:28,095 - job_parser - INFO - ✅ Данные сохранены в CSV: jobs_20260301_131328.csv
+2026-03-01 13:13:28,095 - job_parser - INFO -    Записано записей: 100
+2026-03-01 13:13:28,095 - job_parser - INFO - 
+📋 Примеры найденных вакансий:
+2026-03-01 13:13:28,096 - job_parser - INFO -   1. Senior Python Developer - Payne, Roberts and Davis (Stewartbury, AA)
+2026-03-01 13:13:28,096 - job_parser - INFO -   2. Energy engineer - Vasquez-Davidson (Christopherville, AA)
+2026-03-01 13:13:28,096 - job_parser - INFO -   3. Legal executive - Jackson, Chambers and Levy (Port Ericaburgh, AA)
+2026-03-01 13:13:28,096 - job_parser - INFO -   4. Fitness centre manager - Savage-Bradley (East Seanview, AP)
+2026-03-01 13:13:28,096 - job_parser - INFO -   5. Product manager - Ramirez Inc (North Jamieview, AP)
+2026-03-01 13:13:28,096 - job_parser - INFO -   ... и еще 95 вакансий
+2026-03-01 13:13:28,096 - job_parser - INFO - ============================================================
+2026-03-01 13:13:28,096 - job_parser - INFO - ✅ Парсинг завершен

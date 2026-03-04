@@ -1,0 +1,1 @@
+0 9 * * * cd /path/to/project && python main.py --once >> /var/log/price_monitor.log 2>&1

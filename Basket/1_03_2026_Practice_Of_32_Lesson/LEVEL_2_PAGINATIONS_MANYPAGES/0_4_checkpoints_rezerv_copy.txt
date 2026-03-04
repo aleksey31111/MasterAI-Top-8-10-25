@@ -1,0 +1,43 @@
+class CheckpointScraper:
+    def __init__(self, checkpoint_dir='checkpoints'):
+        self.checkpoint_dir = checkpoint_dir
+        os.makedirs(checkpoint_dir, exist_ok=True)
+
+    def save_checkpoint(self, page_num, books_data):
+        """
+        Сохраняет чекпоинт для конкретной страницы
+        """
+        checkpoint_file = f"{self.checkpoint_dir}/page_{page_num}_checkpoint.json"
+        backup_file = f"{self.checkpoint_dir}/page_{page_num}_backup.json"
+
+        # Если уже есть чекпоинт, создаем бэкап
+        if os.path.exists(checkpoint_file):
+            os.rename(checkpoint_file, backup_file)
+
+        # Сохраняем новый чекпоинт
+        with open(checkpoint_file, 'w') as f:
+            json.dump({
+                'page': page_num,
+                'timestamp': datetime.now().isoformat(),
+                'books': books_data
+            }, f, indent=2)
+
+    def load_checkpoint(self, page_num):
+        """
+        Загружает чекпоинт для страницы, если он существует
+        """
+        checkpoint_file = f"{self.checkpoint_dir}/page_{page_num}_checkpoint.json"
+        backup_file = f"{self.checkpoint_dir}/page_{page_num}_backup.json"
+
+        # Сначала пробуем основной чекпоинт
+        if os.path.exists(checkpoint_file):
+            with open(checkpoint_file, 'r') as f:
+                return json.load(f)
+
+        # Если нет, пробуем бэкап
+        if os.path.exists(backup_file):
+            print(f"⚠️ Основной чекпоинт поврежден, используем бэкап")
+            with open(backup_file, 'r') as f:
+                return json.load(f)
+
+        return None

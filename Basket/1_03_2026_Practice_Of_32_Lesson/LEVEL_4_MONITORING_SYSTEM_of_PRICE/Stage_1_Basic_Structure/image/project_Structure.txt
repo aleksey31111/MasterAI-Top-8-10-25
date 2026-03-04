@@ -1,0 +1,13 @@
+price_monitor/
+├── config.py              # Загрузка конфигурации
+├── scraper.py             # Парсинг цен
+├── database.py            # Работа с SQLite
+├── notifier.py            # Email уведомления
+├── main.py                # Основной скрипт
+├── config.json            # Файл конфигурации
+├── config.example.json    # Пример конфигурации
+├── prices.db             # База данных SQLite
+├── logs/                  # Папка для логов
+│   └── monitor.log
+├── requirements.txt       # Зависимости
+└── README.md              # Документация

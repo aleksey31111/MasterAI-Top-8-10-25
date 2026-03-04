@@ -1,0 +1,57 @@
+{
+    "sites": [
+        {
+            "name": "Demoblaze - Samsung Galaxy s6",
+            "url": "https://www.demoblaze.com/prod.html?idp_1",
+            "price_selector": ".price-container",
+            "currency": "$",
+            "threshold": 500,
+            "description": "Телефон Samsung для тестирования"
+        },
+        {
+            "name": "Demoblaze - Nokia lumia 1520",
+            "url": "https://www.demoblaze.com/prod.html?idp_2",
+            "price_selector": ".price-container",
+            "currency": "$",
+            "threshold": 300,
+            "description": "Телефон Nokia для тестирования"
+        },
+        {
+            "name": "Demoblaze - Nexus 6",
+            "url": "https://www.demoblaze.com/prod.html?idp_3",
+            "price_selector": ".price-container",
+            "currency": "$",
+            "threshold": 400,
+            "description": "Телефон Nexus для тестирования"
+        },
+        {
+            "name": "Books to Scrape - A Light in the Attic",
+            "url": "http://books.toscrape.com/catalogue/a-light-in-the-attic_1000/index.html",
+            "price_selector": ".price_color",
+            "currency": "£",
+            "threshold": 50,
+            "description": "Книга для тестирования"
+        },
+        {
+            "name": "WebScraper - Laptop",
+            "url": "https://webscraper.io/test-sites/e-commerce/allinone/product/626",
+            "price_selector": ".price",
+            "currency": "$",
+            "threshold": 400,
+            "description": "Ноутбук для тестирования"
+        }
+    ],
+    "email": {
+        "smtp_server": "smtp.gmail.com",
+        "port": 587,
+        "sender": "your-test-email@gmail.com",
+        "password": "your-app-password",
+        "recipient": "your-alert-email@example.com"
+    },
+    "check_interval": 24,
+    "settings": {
+        "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "request_delay": 2,
+        "retry_attempts": 3
+    }
+}

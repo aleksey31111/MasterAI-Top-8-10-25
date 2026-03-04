@@ -1,0 +1,71 @@
+import json
+from datetime import datetime
+
+
+class AdaptiveParser:
+    """
+    Адаптивный парсер с обучением на изменениях
+    """
+
+    def __init__(self, config_file='parser_config.json'):
+        self.config_file = config_file
+        self.load_config()
+
+    def load_config(self):
+        """Загружает конфигурацию из файла"""
+        try:
+            with open(self.config_file, 'r') as f:
+                self.config = json.load(f)
+        except FileNotFoundError:
+            self.config = {
+                'url': 'https://news.ycombinator.com/',
+                'selectors': ['span.titleline a', '.title a', 'tr.athing td.title a'],
+                'last_successful': None,
+                'fail_count': 0
+            }
+
+    def save_config(self):
+        """Сохраняет обновленную конфигурацию"""
+        with open(self.config_file, 'w') as f:
+            json.dump(self.config, f, indent=2)
+
+    def parse(self):
+        """Пытается распарсить с обновлением селекторов при неудаче"""
+
+        for selector in self.config['selectors']:
+            try:
+                response = requests.get(self.config['url'])
+                soup = BeautifulSoup(response.text, 'html.parser')
+
+                elements = soup.select(selector)
+                if elements and len(elements) > 5:  # Успешно нашли много заголовков
+                    self.config['last_successful'] = selector
+                    self.config['fail_count'] = 0
+                    self.save_config()
+
+                    print(f"✅ Успешно использован селектор: {selector}")
+                    return [el.get_text(strip=True) for el in elements]
+
+            except Exception as e:
+                continue
+
+        # Если все селекторы не сработали
+        self.config['fail_count'] += 1
+        self.save_config()
+
+        # Если слишком много ошибок, уведомить администратора
+        if self.config['fail_count'] > 5:
+            self.notify_admin()
+
+        return []
+
+    def notify_admin(self):
+        """Отправляет уведомление администратору"""
+        print(f"⚠️ ВНИМАНИЕ: Парсер не работает с {self.config['fail_count']} попыток!")
+        print(f"Последний успешный селектор: {self.config['last_successful']}")
+        # Здесь можно добавить отправку email, Telegram сообщения и т.д.
+
+
+# Использование
+parser = AdaptiveParser()
+titles = parser.parse()

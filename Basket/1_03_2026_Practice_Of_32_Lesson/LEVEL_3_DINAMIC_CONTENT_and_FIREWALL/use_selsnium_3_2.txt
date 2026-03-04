@@ -1,0 +1,17 @@
+def selenium_fallback(url):
+    """Запасной вариант с реальным браузером"""
+    from selenium import webdriver
+    from selenium.webdriver.chrome.options import Options
+
+    options = Options()
+    options.add_argument('--headless')
+    options.add_argument('--disable-blink-features=AutomationControlled')
+
+    driver = webdriver.Chrome(options=options)
+    driver.get(url)
+    time.sleep(3)
+
+    content = driver.page_source
+    driver.quit()
+
+    return content

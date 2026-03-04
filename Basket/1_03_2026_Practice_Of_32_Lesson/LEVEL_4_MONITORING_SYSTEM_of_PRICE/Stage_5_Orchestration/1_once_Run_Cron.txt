@@ -1,0 +1,2 @@
+python main.py --once
+python main.py --once --config my_config.json

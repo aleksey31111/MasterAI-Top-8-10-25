@@ -1,0 +1,10 @@
+<div class="alert-badge">⚠️ СНИЖЕНИЕ ЦЕНЫ ⚠️</div>
+<div class="product-card">
+    <div class="product-title">Смартфон Xiaomi Mi 11</div>
+    <div class="price-info">
+        <div>Текущая цена: <span class="price-current">45000.00 ₽</span></div>
+        <div class="price-threshold">Порог: 50000.00 ₽</div>
+        <div>Разница: 5000.00 ₽ (10.0%)</div>
+    </div>
+    <p><a href="https://example.com/product/123">Ссылка на товар</a></p>
+</div>

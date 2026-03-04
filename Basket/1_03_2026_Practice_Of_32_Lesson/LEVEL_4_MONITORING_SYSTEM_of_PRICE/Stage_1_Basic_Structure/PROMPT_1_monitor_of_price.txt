@@ -1,0 +1,35 @@
+Промпт 1:
+```
+Создай структуру проекта для системы мониторинга цен. Нужны следующие модули:
+
+1. config.py - загрузка конфигурации из JSON-файла
+2. scraper.py - парсинг цен с сайта
+3. database.py - работа с SQLite (сохранение и получение цен)
+4. notifier.py - отправка email-уведомлений
+5. main.py - основной скрипт, координирующий работу
+
+Напиши только файл config.py, который:
+- Загружает данные из config.json (пример файла предоставь)
+- Проверяет наличие всех необходимых полей
+- Возвращает объект с настройками
+
+Пример config.json:
+{
+    "urls": [
+        "https://example.com/product1",
+        "https://example.com/product2"
+    ],
+    "thresholds": {
+        "https://example.com/product1": 50000,
+        "https://example.com/product2": 30000
+    },
+    "email": {
+        "smtp_server": "smtp.gmail.com",
+        "port": 587,
+        "sender": "myemail@gmail.com",
+        "password": "app_password",
+        "recipient": "alert@example.com"
+    },
+    "check_interval": 24
+}
+```

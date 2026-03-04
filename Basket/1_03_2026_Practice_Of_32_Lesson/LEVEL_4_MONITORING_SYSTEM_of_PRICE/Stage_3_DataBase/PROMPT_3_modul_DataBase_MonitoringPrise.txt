@@ -1,0 +1,20 @@
+Этап 3: База данных
+
+Промпт 3:
+```
+Напиши модуль database.py для системы мониторинга цен.
+
+Требования к БД (SQLite):
+- Таблица products: id, url, name, threshold_price
+- Таблица price_history: id, product_id, price, timestamp
+
+Функции:
+1. init_db() - создает таблицы, если их нет
+2. add_product(url, name, threshold) - добавляет новый товар
+3. get_all_products() - возвращает список всех товаров
+4. save_price(product_id, price) - записывает цену в историю
+5. get_last_price(product_id) - получает последнюю цену
+6. get_price_history(product_id, days=30) - историю для графиков
+
+Все функции должны быть с обработкой ошибок и логированием.
+```
